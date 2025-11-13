@@ -14,6 +14,18 @@ import SpecGraph from '../components/SpecGraph';
 function capitalizeFirst(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
+function statusLabel(s) {
+  switch (s) {
+    case 'em_estoque':
+      return 'Em estoque';
+    case 'sob_encomenda':
+      return 'Sob encomenda';
+    case 'indisponivel':
+      return 'Indisponível';
+    default:
+      return capitalizeFirst(String(s || ''));
+  }
+}
 
 export default function ModelDetailsScreen({ route, navigation }) {
   const { code } = route.params;
@@ -92,9 +104,9 @@ export default function ModelDetailsScreen({ route, navigation }) {
       <View style={[styles.card, { backgroundColor: palette.surface }]}>
         <Text style={[styles.cardTitle, { color: palette.primaryDark }]}>Peças Compatíveis</Text>
         {compatibleParts.map((p) => (
-          <TouchableOpacity key={p.code} style={[styles.partRow, { borderBottomColor: palette.border || '#eee' }]} onPress={() => navigation.navigate('PartDetails', { code: p.code })}>
+          <TouchableOpacity key={p.code} style={[styles.partRow, { borderBottomColor: palette.border || '#eee' }]} onPress={() => navigation.navigate('Peças', { screen: 'PartDetails', params: { code: p.code } })}>
             <Text style={[styles.partName, { color: palette.primaryDark }]}>{p.name}</Text>
-            <Text style={[styles.partCode, { color: palette.textSecondary }]}>{p.code} · {p.category} · {p.status}</Text>
+            <Text style={[styles.partCode, { color: palette.textSecondary }]}>{p.code} · {capitalizeFirst(p.category)} · {statusLabel(p.status)}</Text>
           </TouchableOpacity>
         ))}
       </View>

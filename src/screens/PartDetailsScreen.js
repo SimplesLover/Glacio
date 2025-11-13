@@ -96,7 +96,7 @@ export default function PartDetailsScreen({ route, navigation }) {
       <View style={[styles.card, { backgroundColor: palette.surface }]}>
         <Text style={[styles.cardTitle, { color: palette.primaryDark }]}>Modelos Compatíveis</Text>
         {(part?.compatibleModels || []).map((m) => (
-          <TouchableOpacity key={m} style={[styles.modelRow, { borderBottomColor: palette.border || '#eee' }]} onPress={() => navigation.navigate('ModelDetails', { code: m })}>
+          <TouchableOpacity key={m} style={[styles.modelRow, { borderBottomColor: palette.border || '#eee' }]} onPress={() => navigation.navigate('Modelos', { screen: 'ModelDetails', params: { code: m } })}>
             <Text style={[styles.modelText, { color: palette.primaryDark }]}>{m}</Text>
           </TouchableOpacity>
         ))}

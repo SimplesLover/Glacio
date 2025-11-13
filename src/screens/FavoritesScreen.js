@@ -22,7 +22,7 @@ export default function FavoritesScreen({ navigation }) {
         ListEmptyComponent={<Text style={[styles.empty, { color: palette.textSecondary }]}>Nenhum modelo favoritado.</Text>}
         renderItem={({ item }) => (
           <View style={[styles.row, { backgroundColor: palette.surface }]}>
-            <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('ModelDetails', { code: item.code })}>
+            <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('Modelos', { screen: 'ModelDetails', params: { code: item.code } })}>
               <Text style={[styles.rowTitle, { color: palette.primaryDark }]}>{item.name}</Text>
               <Text style={[styles.rowSub, { color: palette.textSecondary }]}>{item.code} · {item.brand}</Text>
             </TouchableOpacity>
@@ -38,7 +38,7 @@ export default function FavoritesScreen({ navigation }) {
         ListEmptyComponent={<Text style={[styles.empty, { color: palette.textSecondary }]}>Nenhuma peça favoritada.</Text>}
         renderItem={({ item }) => (
           <View style={[styles.row, { backgroundColor: palette.surface }]}>
-            <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('PartDetails', { code: item.code })}>
+            <TouchableOpacity style={{ flex: 1 }} onPress={() => navigation.navigate('Peças', { screen: 'PartDetails', params: { code: item.code } })}>
               <Text style={[styles.rowTitle, { color: palette.primaryDark }]}>{item.name}</Text>
               <Text style={[styles.rowSub, { color: palette.textSecondary }]}>{item.code} · {item.category}</Text>
             </TouchableOpacity>

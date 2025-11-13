@@ -93,7 +93,18 @@ export default function RootNavigator() {
             headerBackground: () => null,
           }}
         />
-        <Stack.Screen name="ModelDetails" component={ModelDetailsScreen} options={{ title: 'Detalhes do Modelo' }} />
+        <Stack.Screen 
+          name="ModelDetails" 
+          component={ModelDetailsScreen} 
+          options={({ navigation }) => ({ 
+            title: 'Detalhes do Modelo',
+            headerLeft: () => (
+              <TouchableOpacity onPress={() => (navigation.canGoBack() ? navigation.goBack() : navigation.navigate('Models'))} style={{ marginLeft: 8 }}>
+                <Ionicons name="arrow-back" size={isSmall ? 18 : 20} color="#fff" />
+              </TouchableOpacity>
+            ),
+          })} 
+        />
       </Stack.Navigator>
     );
   }
@@ -110,7 +121,18 @@ export default function RootNavigator() {
             headerBackground: () => null,
           }}
         />
-        <Stack.Screen name="PartDetails" component={PartDetailsScreen} options={{ title: 'Detalhes da Peça' }} />
+        <Stack.Screen 
+          name="PartDetails" 
+          component={PartDetailsScreen} 
+          options={({ navigation }) => ({ 
+            title: 'Detalhes da Peça',
+            headerLeft: () => (
+              <TouchableOpacity onPress={() => (navigation.canGoBack() ? navigation.goBack() : navigation.navigate('Parts'))} style={{ marginLeft: 8 }}>
+                <Ionicons name="arrow-back" size={isSmall ? 18 : 20} color="#fff" />
+              </TouchableOpacity>
+            ),
+          })} 
+        />
       </Stack.Navigator>
     );
   }
