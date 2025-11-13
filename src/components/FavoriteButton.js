@@ -7,9 +7,6 @@ import { useTheme } from '../context/ThemeContext';
 export default function FavoriteButton({ type, code, active }) {
   const { addFavoriteModel, removeFavoriteModel, addFavoritePart, removeFavoritePart } = useData();
   const { palette } = useTheme();
-  console.assert(type === 'model' || type === 'part');
-  console.assert(typeof code === 'string');
-  console.assert(typeof active === 'boolean');
 
   const toggle = () => {
     if (type === 'model') {

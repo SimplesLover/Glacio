@@ -3,10 +3,8 @@ import { View, StyleSheet } from 'react-native';
 import Text from './Text';
 
 export default function SpecGraph({ capacity, power }) {
-  console.assert(typeof capacity === 'number');
-  console.assert(typeof power === 'number');
-  const capPct = Math.min(1, Math.max(0, capacity / 1000));
-  const powPct = Math.min(1, Math.max(0, power / 1100));
+  const capPct = Math.min(1, capacity / 1000);
+  const powPct = Math.min(1, power / 1100);
   return (
     <View style={styles.wrap}>
       <Text style={styles.title}>Gráfico de Especificações</Text>
@@ -17,8 +15,6 @@ export default function SpecGraph({ capacity, power }) {
 }
 
 function Bar({ label, pct, color }) {
-  console.assert(typeof label === 'string');
-  console.assert(typeof pct === 'number');
   return (
     <View style={{ marginVertical: 6 }}>
       <Text style={styles.label}>{label}</Text>

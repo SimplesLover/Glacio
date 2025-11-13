@@ -10,16 +10,11 @@ import { useTheme } from '../context/ThemeContext';
 export default function FavoritesScreen({ navigation }) {
   const { palette } = useTheme();
   const { models, parts, favoritesModels, favoritesParts, removeFavoriteModel, removeFavoritePart } = useData();
-  const MAX_FAV_ITEMS = 100;
-  const favModels = useMemo(() => models.filter((m) => favoritesModels.includes(m.code)).slice(0, MAX_FAV_ITEMS), [models, favoritesModels]);
-  const favParts = useMemo(() => parts.filter((p) => favoritesParts.includes(p.code)).slice(0, MAX_FAV_ITEMS), [parts, favoritesParts]);
+  const favModels = useMemo(() => models.filter((m) => favoritesModels.includes(m.code)), [models, favoritesModels]);
+  const favParts = useMemo(() => parts.filter((p) => favoritesParts.includes(p.code)), [parts, favoritesParts]);
 
   return (
     <View style={{ flex: 1, padding: spacing.md, backgroundColor: palette.background }}>
-      {console.assert(Array.isArray(models))}
-      {console.assert(Array.isArray(parts))}
-      {console.assert(Array.isArray(favoritesModels))}
-      {console.assert(Array.isArray(favoritesParts))}
       <Text style={[styles.sectionTitle, { color: palette.primaryDark }]}>Modelos</Text>
       <FlatList
         data={favModels}

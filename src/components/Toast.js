@@ -6,7 +6,6 @@ import { useData } from '../context/DataContext';
 
 export default function Toast() {
   const { toast } = useData();
-  console.assert(typeof toast === 'object');
   if (!toast.visible) return null;
   return (
     <View pointerEvents="none" style={styles.container}>

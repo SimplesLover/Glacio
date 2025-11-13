@@ -19,8 +19,6 @@ export default function WebViewScreen({ navigation, route }) {
   const { palette } = useTheme();
   const { title, url } = route.params;
   const [loading, setLoading] = React.useState(true);
-  console.assert(typeof title === 'string');
-  console.assert(typeof url === 'string');
 
   const openInBrowser = async () => {
     try {

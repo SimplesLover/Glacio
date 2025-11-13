@@ -15,12 +15,12 @@ export default function SearchBar({ placeholder, onSearch, area, filtersEnabled,
   const styles = makeStyles(palette, compact);
 
   useEffect(() => {
-    if (typeof onSearch === 'function') onSearch('');
+    onSearch('');
   }, []);
 
   const doSearch = (q) => {
     setQuery(q);
-    if (typeof onSearch === 'function') onSearch(q);
+    onSearch(q);
   };
 
   const submit = () => {

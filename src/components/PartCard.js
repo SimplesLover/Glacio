@@ -20,7 +20,6 @@ export default function PartCard({ item, onPress, onCompat }) {
   const onPressIn = () => Animated.spring(scale, { toValue: 0.98, useNativeDriver: true }).start();
   const onPressOut = () => Animated.spring(scale, { toValue: 1, useNativeDriver: true }).start();
   const styles = makeStyles(palette, textScale);
-  console.assert(item && typeof item.code === 'string');
 
   useEffect(() => {
     setUri(item?.image || null);

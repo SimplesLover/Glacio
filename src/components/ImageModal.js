@@ -3,9 +3,6 @@ import { Modal, View, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
 export default function ImageModal({ visible, onClose, uri }) {
-  console.assert(typeof visible === 'boolean');
-  console.assert(typeof onClose === 'function');
-  console.assert(!uri || typeof uri === 'string');
   return (
     <Modal visible={visible} transparent animationType="fade">
       <View style={styles.backdrop}>

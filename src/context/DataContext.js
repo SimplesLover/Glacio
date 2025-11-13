@@ -121,12 +121,11 @@ export function DataProvider({ children }) {
     toastTimer.current = setTimeout(() => setToast({ visible: false, message: '', type: 'info' }), 2000);
   };
 
-  const HISTORY_LIMIT = 10;
   const pushSearchHistory = (area, query) => {
     setSearchHistory((prev) => {
       const next = { ...prev };
       const list = next[area] || [];
-      const updated = [query, ...list.filter((q) => q !== query)].slice(0, HISTORY_LIMIT);
+      const updated = [query, ...list.filter((q) => q !== query)].slice(0, 10);
       next[area] = updated;
       const storageKey = area === 'models' ? 'history_models' : 'history_parts';
       if (storageKey && updated && Array.isArray(updated)) {

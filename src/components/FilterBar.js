@@ -9,10 +9,6 @@ import { useTheme } from '../context/ThemeContext';
 export default function FilterBar({ kind, filters, setFilters, categories = [] }) {
   const { palette, isDark } = useTheme();
   const styles = makeStyles(palette, isDark);
-  console.assert(kind === 'models' || kind === 'parts');
-  console.assert(typeof setFilters === 'function');
-  console.assert(typeof filters === 'object');
-  console.assert(Array.isArray(categories));
   if (kind === 'models') {
     const types = [
       { label: 'Todos', value: 'todos' },
@@ -70,7 +66,6 @@ export default function FilterBar({ kind, filters, setFilters, categories = [] }
   }
 
   if (kind === 'parts') {
-    const MAX_CATEGORY_CHIPS = 30;
     return (
       <View style={styles.bar}>
         <Text style={styles.label}>Categoria</Text>
@@ -78,7 +73,7 @@ export default function FilterBar({ kind, filters, setFilters, categories = [] }
           <Chip selected={filters.category === 'todos'} onPress={() => setFilters({ ...filters, category: 'todos' })}>
             Todos
           </Chip>
-          {(categories || []).slice(0, MAX_CATEGORY_CHIPS).map((c) => (
+          {(categories || []).map((c) => (
             <Chip key={c.key} selected={filters.category === c.key} onPress={() => setFilters({ ...filters, category: c.key })}>
               {c.label}
             </Chip>

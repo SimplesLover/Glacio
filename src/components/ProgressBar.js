@@ -3,7 +3,6 @@ import { View, StyleSheet } from 'react-native';
 import colors from '../design/colors';
 
 export default function ProgressBar({ progress }) {
-  console.assert(typeof progress === 'number');
   return (
     <View style={styles.bg}>
       <View style={[styles.fill, { width: `${Math.max(0, Math.min(100, progress))}%` }]} />

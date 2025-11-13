@@ -15,7 +15,6 @@ export default function PartsScreen({ navigation }) {
   const { palette } = useTheme();
   const { width } = useWindowDimensions();
   const insets = useSafeAreaInsets();
-  const MAX_RESULTS = 200;
   const [query, setQuery] = useState('');
   const [refreshing, setRefreshing] = useState(false);
   const [filters, setFilters] = useState({ category: 'todos' });
@@ -48,8 +47,6 @@ export default function PartsScreen({ navigation }) {
 
   return (
     <View style={styles.container}>
-      {console.assert(Array.isArray(parts))}
-      {console.assert(Array.isArray(categories))}
       <HeroHeader 
         title="Buscar Peças" 
         subtitle="Encontre a peça ideal para sua necessidade"
@@ -71,7 +68,7 @@ export default function PartsScreen({ navigation }) {
         <FilterBar kind="parts" filters={filters} setFilters={setFilters} categories={categories} />
       )}
       <FlatList
-        data={filtered.slice(0, MAX_RESULTS)}
+        data={filtered}
         keyExtractor={(item) => item.code}
         numColumns={numColumns}
         columnWrapperStyle={numColumns > 1 ? styles.column : undefined}

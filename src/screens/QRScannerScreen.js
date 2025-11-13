@@ -19,7 +19,6 @@ export default function QRScannerScreen() {
   const [scanned, setScanned] = useState(false);
   const [code, setCode] = useState(null);
   const line = useRef(new Animated.Value(0)).current;
-  const ANIM_ITERATIONS = 60;
 
   useEffect(() => {
     (async () => {
@@ -42,8 +41,7 @@ export default function QRScannerScreen() {
       Animated.sequence([
         Animated.timing(line, { toValue: 1, duration: 1200, useNativeDriver: true }),
         Animated.timing(line, { toValue: 0, duration: 1200, useNativeDriver: true }),
-      ]),
-      { iterations: ANIM_ITERATIONS }
+      ])
     ).start();
   }, [line]);
 
