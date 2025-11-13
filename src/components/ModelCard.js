@@ -17,6 +17,7 @@ export default function ModelCard({ item, onPress }) {
   const [uri, setUri] = useState(item?.images?.[0] || null);
   const { palette } = useTheme();
   const styles = makeStyles(palette);
+  console.assert(item && typeof item.code === 'string');
 
   useEffect(() => {
     setUri(item?.images?.[0] || null);

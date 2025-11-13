@@ -17,6 +17,8 @@ export default function PartDetailsScreen({ route, navigation }) {
   const { code } = route.params;
   const { parts, favoritesParts } = useData();
   const { palette } = useTheme();
+  const MAX_SPEC_ITEMS = 100;
+  const MAX_COMPAT_MODELS = 200;
   const part = useMemo(() => parts.find((p) => p.code === code), [parts, code]);
   const [uri, setUri] = useState(part?.image || null);
 
@@ -55,6 +57,8 @@ export default function PartDetailsScreen({ route, navigation }) {
 
   return (
     <ScrollView style={{ flex: 1, backgroundColor: palette.background }} contentContainerStyle={{ padding: 12 }}>
+      {console.assert(typeof code === 'string')}
+      {console.assert(Array.isArray(parts))}
       {part ? (
         <>
           <View style={styles.header}>
@@ -83,7 +87,7 @@ export default function PartDetailsScreen({ route, navigation }) {
 
       <View style={[styles.card, { backgroundColor: palette.surface }]}>
         <Text style={[styles.cardTitle, { color: palette.primaryDark }]}>Especificações</Text>
-        {Object.keys(part?.specs || {}).map((k) => (
+        {Object.keys(part?.specs || {}).slice(0, MAX_SPEC_ITEMS).map((k) => (
           <Text key={k} style={[styles.spec, { color: palette.textPrimary }]}>{capitalizeLabel(k)}: {String(part.specs[k])}</Text>
         ))}
       </View>
@@ -95,7 +99,7 @@ export default function PartDetailsScreen({ route, navigation }) {
 
       <View style={[styles.card, { backgroundColor: palette.surface }]}>
         <Text style={[styles.cardTitle, { color: palette.primaryDark }]}>Modelos Compatíveis</Text>
-        {(part?.compatibleModels || []).map((m) => (
+        {(part?.compatibleModels || []).slice(0, MAX_COMPAT_MODELS).map((m) => (
           <TouchableOpacity key={m} style={[styles.modelRow, { borderBottomColor: palette.border || '#eee' }]} onPress={() => navigation.navigate('ModelDetails', { code: m })}>
             <Text style={[styles.modelText, { color: palette.primaryDark }]}>{m}</Text>
           </TouchableOpacity>

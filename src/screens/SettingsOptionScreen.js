@@ -23,6 +23,11 @@ export default function SettingsOptionScreen({ navigation, route }) {
     return unsubscribe;
   }, [navigation]);
 
+  React.useMemo(() => {
+    console.assert(typeof title === 'string');
+    console.assert(Array.isArray(options));
+  }, [title, options]);
+
   const OptionItem = ({ option, isSelected }) => (
     <TouchableOpacity 
       style={[

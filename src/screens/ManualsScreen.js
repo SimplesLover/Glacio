@@ -21,15 +21,19 @@ export default function ManualsScreen({ navigation }) {
   const { palette } = useTheme();
   const [filter, setFilter] = useState('todos');
   const [downloading, setDownloading] = useState({ id: null, progress: 0 });
+  const MAX_TICK = 10;
+  const TICK_STEP = 10;
 
   const filtered = MANUALS.filter((m) => (filter === 'todos' ? true : m.category === filter));
 
   const startDownload = (id) => {
     setDownloading({ id, progress: 0 });
+    let ticks = 0;
     let p = 0;
     const timer = setInterval(() => {
-      p += 10;
-      if (p >= 100) {
+      ticks += 1;
+      p = Math.min(100, p + TICK_STEP);
+      if (ticks >= MAX_TICK || p >= 100) {
         clearInterval(timer);
         setDownloading({ id: null, progress: 0 });
       } else {
@@ -40,6 +44,7 @@ export default function ManualsScreen({ navigation }) {
 
   const LABELS = { todos: 'Todos', instalacao: 'Instalação', manutencao: 'Manutenção', troubleshooting: 'Troubleshooting' };
   const pretty = (c) => LABELS[c] || c;
+  console.assert(['todos','instalacao','manutencao','troubleshooting'].includes(filter));
 
   const styles = makeStyles(palette);
 

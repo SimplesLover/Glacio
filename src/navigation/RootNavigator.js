@@ -61,7 +61,7 @@ export default function RootNavigator() {
           name="Home"
           component={HomeScreen}
           options={({ navigation }) => ({
-            title: 'Glacio',
+            title: 'Pollar',
             headerRight: () => (
               <>
                 <TouchableOpacity onPress={() => navigation.navigate('QRScanner')} style={{ marginRight: 12 }}>

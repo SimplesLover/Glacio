@@ -15,6 +15,8 @@ export default function HomeScreen({ navigation }) {
   const { models, parts, favoritesModels, favoritesParts } = useData();
   const { textScale } = useTextSize();
   const styles = createStyles(palette, textScale);
+  const FAV_LIMIT = 10;
+  const NEW_LIMIT = 8;
   const [now, setNow] = useState(new Date());
   useEffect(() => {
     const id = setInterval(() => setNow(new Date()), 60 * 1000); // atualiza a cada minuto
@@ -33,9 +35,9 @@ export default function HomeScreen({ navigation }) {
   const tip = tipsByWeekday[now.getDay()];
   const dateStr = now.toLocaleDateString('pt-BR', { weekday: 'long', month: 'long', day: 'numeric' });
 
-  const favModels = useMemo(() => models.filter((m) => favoritesModels.includes(m.code)).slice(0, 10), [models, favoritesModels]);
-  const favParts = useMemo(() => parts.filter((p) => favoritesParts.includes(p.code)).slice(0, 10), [parts, favoritesParts]);
-  const whatsNew = useMemo(() => models.slice(0, 8), [models]);
+  const favModels = useMemo(() => models.filter((m) => favoritesModels.includes(m.code)).slice(0, FAV_LIMIT), [models, favoritesModels]);
+  const favParts = useMemo(() => parts.filter((p) => favoritesParts.includes(p.code)).slice(0, FAV_LIMIT), [parts, favoritesParts]);
+  const whatsNew = useMemo(() => models.slice(0, NEW_LIMIT), [models]);
 
   const Tile = ({ image, title, onPress }) => (
     <TouchableOpacity style={styles.tile} activeOpacity={0.85} onPress={onPress}>

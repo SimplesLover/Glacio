@@ -7,6 +7,8 @@ import { useTheme } from '../context/ThemeContext';
 export default function HeroHeader({ title, subtitle, children, style, titleStyle, subtitleStyle }) {
   const { palette } = useTheme();
   const styles = makeStyles(palette);
+  console.assert(!title || typeof title === 'string');
+  console.assert(!subtitle || typeof subtitle === 'string');
   return (
     <LinearGradient
       colors={[palette.primaryDark, palette.secondary]}

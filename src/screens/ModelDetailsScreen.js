@@ -19,6 +19,8 @@ export default function ModelDetailsScreen({ route, navigation }) {
   const { code } = route.params;
   const { models, parts, favoritesModels } = useData();
   const { palette } = useTheme();
+  const MAX_GALLERY_ITEMS = 20;
+  const MAX_COMPAT_PARTS = 200;
   const model = useMemo(() => models.find((m) => m.code === code), [models, code]);
   const [modalImage, setModalImage] = useState(null);
   const [galleryUris, setGalleryUris] = useState(model?.images ?? []);
@@ -34,6 +36,9 @@ export default function ModelDetailsScreen({ route, navigation }) {
 
   return (
     <ScrollView style={{ flex: 1, backgroundColor: palette.background }} contentContainerStyle={{ padding: 12 }}>
+      {console.assert(typeof code === 'string')}
+      {console.assert(Array.isArray(models))}
+      {console.assert(Array.isArray(parts))}
       {model ? (
         <>
           <View style={styles.header}>
@@ -47,7 +52,7 @@ export default function ModelDetailsScreen({ route, navigation }) {
       )}
 
       <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ marginTop: 10 }}>
-        {galleryUris.map((uri, i) => (
+        {galleryUris.slice(0, MAX_GALLERY_ITEMS).map((uri, i) => (
           <TouchableOpacity key={`${model.code}-img-${i}`} onPress={() => setModalImage(uri)}>
             <Image
               source={{ uri }}
@@ -91,7 +96,7 @@ export default function ModelDetailsScreen({ route, navigation }) {
 
       <View style={[styles.card, { backgroundColor: palette.surface }]}>
         <Text style={[styles.cardTitle, { color: palette.primaryDark }]}>Peças Compatíveis</Text>
-        {compatibleParts.map((p) => (
+        {compatibleParts.slice(0, MAX_COMPAT_PARTS).map((p) => (
           <TouchableOpacity key={p.code} style={[styles.partRow, { borderBottomColor: palette.border || '#eee' }]} onPress={() => navigation.navigate('PartDetails', { code: p.code })}>
             <Text style={[styles.partName, { color: palette.primaryDark }]}>{p.name}</Text>
             <Text style={[styles.partCode, { color: palette.textSecondary }]}>{p.code} · {p.category} · {p.status}</Text>

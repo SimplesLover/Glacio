@@ -14,6 +14,7 @@ export default function ModelsScreen({ navigation }) {
   const { palette } = useTheme();
   const { width } = useWindowDimensions();
   const insets = useSafeAreaInsets();
+  const MAX_RESULTS = 200;
   const [query, setQuery] = useState('');
   const [refreshing, setRefreshing] = useState(false);
   const [filters, setFilters] = useState({ type: 'todos', brand: 'todos', capacity: 'todos' });
@@ -46,6 +47,7 @@ export default function ModelsScreen({ navigation }) {
   const marginBottom = Math.round(width * 0.03);
   return (
     <View style={styles.container}>
+      {console.assert(Array.isArray(models))}
       <HeroHeader 
         title="Consultar Modelos" 
         subtitle="Encontre o modelo ideal para sua necessidade"
@@ -65,7 +67,7 @@ export default function ModelsScreen({ navigation }) {
       </HeroHeader>
       {filtersEnabled && <FilterBar kind="models" filters={filters} setFilters={setFilters} />}
       <FlatList
-        data={filtered}
+        data={filtered.slice(0, MAX_RESULTS)}
         keyExtractor={(item) => item.code}
         numColumns={2}
         columnWrapperStyle={styles.column}

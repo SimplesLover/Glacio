@@ -292,13 +292,10 @@ export default function SettingsScreen({ navigation }) {
           subtitle="Libere espaço no dispositivo"
           onPress={async () => {
             try {
-              // Limpar dados do AsyncStorage (preservando configurações importantes)
               const keys = await AsyncStorage.getAllKeys();
-              const filteredKeys = keys.filter(key => 
-                !['theme_mode', 'app_theme_preference', 'app_text_size', 'app_auto_save', 'app_notifications'].includes(key)
-              );
+              const PRESERVE_KEYS = ['theme_mode', 'app_theme_preference', 'app_text_size', 'app_auto_save', 'app_notifications'];
+              const filteredKeys = keys.filter(key => !PRESERVE_KEYS.includes(key));
               await AsyncStorage.multiRemove(filteredKeys);
-              
               showToast('Cache limpo com sucesso!', 'success');
             } catch (error) {
               console.error('Erro ao limpar cache:', error);
@@ -312,7 +309,7 @@ export default function SettingsScreen({ navigation }) {
 
       <View style={styles.footer}>
         <Text style={[styles.footerText, { color: palette.textSecondary }]}>
-          Glacio - Sistema de Consulta Técnica
+          Pollar - Sistema de Consulta Técnica
         </Text>
         <Text style={[styles.footerText, { color: palette.textSecondary }]}>
           Desenvolvido para profissionais de refrigeração
