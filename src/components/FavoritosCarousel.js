@@ -1,0 +1,51 @@
+import React, { useMemo } from 'react'
+import { View, Text, FlatList, TouchableOpacity, Image, StyleSheet, useWindowDimensions } from 'react-native'
+import { useFavoritos } from '../contexts/FavoritosContext'
+import { MODELOS } from '../data/modelos'
+import { useNavigation } from '@react-navigation/native'
+import { useThemeContext } from '../contexts/ThemeContext'
+import { wp, hp, fs } from '../constants/theme'
+
+export default function FavoritosCarousel() {
+  const { favoritos } = useFavoritos()
+  const nav = useNavigation()
+  const { colors } = useThemeContext()
+  const { width } = useWindowDimensions()
+  const cols = useMemo(() => (width < 360 ? 2 : width < 720 ? 3 : 4), [width])
+  const gap = wp(2)
+  const itemWidth = (width - gap * (cols + 1)) / cols
+  const items = useMemo(() => MODELOS.filter(m => favoritos.includes(m.id)), [favoritos])
+  if (items.length === 0)
+    return (
+      <View style={styles.container}>
+        <Text style={[styles.title, { color: colors.text }]}>Favoritos</Text>
+        <Text style={[styles.empty, { color: colors.textSecondary }]}>Nenhum favorito ainda</Text>
+      </View>
+    )
+  return (
+    <View style={styles.container}>
+      <Text style={[styles.title, { color: colors.text }]}>Favoritos</Text>
+      <FlatList
+        horizontal
+        data={items}
+        keyExtractor={item => item.id}
+        showsHorizontalScrollIndicator={false}
+        renderItem={({ item }) => (
+          <TouchableOpacity onPress={() => nav.navigate('TelaDetalheModelo', { modeloId: item.id })} style={[styles.card, { width: itemWidth, backgroundColor: colors.card, borderColor: colors.border }] }>
+            <Image source={{ uri: item.imagem }} style={styles.image} />
+            <Text style={[styles.name, { color: colors.text }]} numberOfLines={1}>{item.nome}</Text>
+          </TouchableOpacity>
+        )}
+      />
+    </View>
+  )
+}
+
+const styles = StyleSheet.create({
+  container: { marginTop: hp(2) },
+  title: { marginHorizontal: wp(4), marginBottom: hp(1), fontSize: fs(16), fontWeight: '600' },
+  empty: { marginHorizontal: wp(4), fontSize: fs(13) },
+  card: { marginLeft: wp(4), borderRadius: 12, overflow: 'hidden', borderWidth: 1 },
+  image: { width: '100%', height: hp(16) },
+  name: { padding: wp(3), fontSize: fs(14) }
+})
