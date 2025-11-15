@@ -4,7 +4,7 @@ export const MODELOS = [
     nome: 'Geladeira Frost Free',
     codigo: 'DFN41',
     tipo: 'Refrigerador',
-    marca: 'Eletrolux',
+    marca: 'Electrolux',
     imagem: 'https://via.placeholder.com/600x400?text=Modelo+ABC-123',
     especificacoes: {
       voltagem: '220V',

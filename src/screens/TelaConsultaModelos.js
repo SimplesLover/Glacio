@@ -3,6 +3,7 @@ import { View, FlatList, useWindowDimensions, TextInput, TouchableOpacity, Text,
 import AppHeader from '../components/AppHeader'
 import ModeloCard from '../components/ModeloCard'
 import { MODELOS } from '../data/modelos'
+import { MARCAS } from '../data/marcas'
 import { useRoute, useNavigation } from '@react-navigation/native'
 import { wp, hp, fs } from '../constants/theme'
 import { Ionicons } from '@expo/vector-icons'
@@ -20,7 +21,7 @@ export default function TelaConsultaModelos() {
   const { colors, isDark } = useThemeContext()
   const marca = route.params?.marca
   const allOptions = useMemo(() => {
-    const marcas = Array.from(new Set(MODELOS.map(m => m.marca)))
+    const marcas = MARCAS.map(m => m.nome)
     const tipo = Array.from(new Set(MODELOS.map(m => m.tipo)))
     const voltagem = Array.from(new Set(MODELOS.map(m => m.especificacoes.voltagem)))
     const consumo = Array.from(new Set(MODELOS.map(m => m.especificacoes.consumo)))
