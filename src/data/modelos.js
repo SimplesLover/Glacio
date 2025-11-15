@@ -613,4 +613,565 @@ export const MODELOS = [
     },
     particularidades: ['Tecnologia All Cooling']
   }
+  ,
+  {
+    id: 'CSL-001',
+    nome: 'Geladeira Consul Facilite Frost Free 340L',
+    codigo: 'CRM39AB',
+    tipo: 'Refrigerador',
+    marca: 'Consul',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+CSL-001',
+    especificacoes: {
+      voltagem: '220V',
+      consumo: '390W',
+      dimensoes: { altura: '175cm', largura: '62cm', profundidade: '71cm' },
+      peso: '65kg',
+      capacidade: '340L',
+      classeEnergetica: 'A'
+    },
+    temperaturas: {
+      refrigerador: { min: 3, max: 9 },
+      freezer: { min: -17, max: -11 }
+    },
+    componentes: {
+      compressor: 'Embraco FFI10HAK',
+      ventilador: 'Ventilador Simples',
+      termostato: 'Termostato Eletrônico',
+      condensador: 'Condensador Interno',
+      evaporador: 'Evaporador Frost Free'
+    },
+    particularidades: ['Função Turbo Freezer', 'Filtro Antiodor']
+  },
+  {
+    id: 'CSL-002',
+    nome: 'Geladeira Consul Degelo Seco 300L',
+    codigo: 'CRC30GB',
+    tipo: 'Refrigerador',
+    marca: 'Consul',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+CSL-002',
+    especificacoes: {
+      voltagem: '127V',
+      consumo: '350W',
+      dimensoes: { altura: '170cm', largura: '60cm', profundidade: '65cm' },
+      peso: '60kg',
+      capacidade: '300L',
+      classeEnergetica: 'A'
+    },
+    temperaturas: {
+      refrigerador: { min: 4, max: 10 },
+      freezer: { min: -15, max: -9 }
+    },
+    componentes: {
+      compressor: 'Tecumseh THB1340Y',
+      ventilador: 'N/A',
+      termostato: 'Termostato Analógico',
+      condensador: 'Serpentina Interna',
+      evaporador: 'Evaporador Placa Fria'
+    },
+    particularidades: ['Degelo Seco (Cycle Defrost)']
+  },
+  {
+    id: 'CSL-003',
+    nome: 'Freezer Vertical Frost Free 220L',
+    codigo: 'CVU20EB',
+    tipo: 'Freezer',
+    marca: 'Consul',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+CSL-003',
+    especificacoes: {
+      voltagem: '220V',
+      consumo: '380W',
+      dimensoes: { altura: '169cm', largura: '61cm', profundidade: '69cm' },
+      peso: '65kg',
+      capacidade: '220L',
+      classeEnergetica: 'A'
+    },
+    temperaturas: {
+      refrigerador: { min: 0, max: 0 },
+      freezer: { min: -24, max: -18 }
+    },
+    componentes: {
+      compressor: 'Embraco FFI85HAK',
+      ventilador: 'Axial 12V',
+      termostato: 'Termostato Eletrônico',
+      condensador: 'Condensador Frio',
+      evaporador: 'Evaporador Frost Free'
+    },
+    particularidades: ['Gavetas Removíveis']
+  },
+  {
+    id: 'CSL-004',
+    nome: 'Freezer Horizontal 309L Dupla Ação',
+    codigo: 'CHF30',
+    tipo: 'Freezer',
+    marca: 'Consul',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+CSL-004',
+    especificacoes: {
+      voltagem: '127V',
+      consumo: '390W',
+      dimensoes: { altura: '90cm', largura: '110cm', profundidade: '70cm' },
+      peso: '65kg',
+      capacidade: '309L',
+      classeEnergetica: 'B'
+    },
+    temperaturas: {
+      refrigerador: { min: 0, max: 8 },
+      freezer: { min: -20, max: -10 }
+    },
+    componentes: {
+      compressor: 'Tecumseh AE1360Y',
+      ventilador: 'N/A',
+      termostato: 'Termostato Dupla Ação',
+      condensador: 'Condensador Estático',
+      evaporador: 'Evaporador Serpentina'
+    },
+    particularidades: ['Dupla Função (Freezer e Refrigerador)']
+  },
+  {
+    id: 'CSL-005',
+    nome: 'Geladeira Consul Prateleiras Flex 437L Inox',
+    codigo: 'CRM55AK',
+    tipo: 'Refrigerador',
+    marca: 'Consul',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+CSL-005',
+    especificacoes: {
+      voltagem: '220V',
+      consumo: '450W',
+      dimensoes: { altura: '184cm', largura: '71cm', profundidade: '75cm' },
+      peso: '85kg',
+      capacidade: '437L',
+      classeEnergetica: 'A'
+    },
+    temperaturas: {
+      refrigerador: { min: 2, max: 8 },
+      freezer: { min: -18, max: -12 }
+    },
+    componentes: {
+      compressor: 'Embraco FFI12HBX',
+      ventilador: 'Ventilador Multi Flow',
+      termostato: 'Painel Touch',
+      condensador: 'Condensador Aletado',
+      evaporador: 'Evaporador Frost Free'
+    },
+    particularidades: ['Prateleiras Flexíveis (Alturas ajustáveis)']
+  },
+  {
+    id: 'CSL-006',
+    nome: 'Geladeira 1 Porta Cycle Defrost 280L',
+    codigo: 'CRB36AB',
+    tipo: 'Refrigerador',
+    marca: 'Consul',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+CSL-006',
+    especificacoes: {
+      voltagem: '127V',
+      consumo: '320W',
+      dimensoes: { altura: '166cm', largura: '55cm', profundidade: '62cm' },
+      peso: '58kg',
+      capacidade: '280L',
+      classeEnergetica: 'A'
+    },
+    temperaturas: {
+      refrigerador: { min: 4, max: 10 },
+      freezer: { min: -12, max: -6 }
+    },
+    componentes: {
+      compressor: 'Embraco FFI85HAK',
+      ventilador: 'N/A',
+      termostato: 'Termostato Simples',
+      condensador: 'Serpentina Interna',
+      evaporador: 'Evaporador Placa'
+    },
+    particularidades: ['Espaço Flex']
+  },
+  {
+    id: 'CSL-007',
+    nome: 'Refrigerador Top Freezer 451L Frost Free Inox',
+    codigo: 'CRM54BK',
+    tipo: 'Refrigerador',
+    marca: 'Consul',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+CSL-007',
+    especificacoes: {
+      voltagem: '220V',
+      consumo: '460W',
+      dimensoes: { altura: '189cm', largura: '70cm', profundidade: '73cm' },
+      peso: '88kg',
+      capacidade: '451L',
+      classeEnergetica: 'A+'
+    },
+    temperaturas: {
+      refrigerador: { min: 1, max: 7 },
+      freezer: { min: -19, max: -13 }
+    },
+    componentes: {
+      compressor: 'Embraco FFI14HBX',
+      ventilador: 'EBM-PAPST W2E200-HH38',
+      termostato: 'Painel Eletrônico',
+      condensador: 'Condensador Ventilado',
+      evaporador: 'Evaporador Frost Free'
+    },
+    particularidades: ['Função Super Frio']
+  },
+  {
+    id: 'CSL-008',
+    nome: 'Freezer Horizontal 425L Tampa Cega',
+    codigo: 'CHF45',
+    tipo: 'Freezer',
+    marca: 'Consul',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+CSL-008',
+    especificacoes: {
+      voltagem: '127V',
+      consumo: '480W',
+      dimensoes: { altura: '94cm', largura: '140cm', profundidade: '75cm' },
+      peso: '80kg',
+      capacidade: '425L',
+      classeEnergetica: 'C'
+    },
+    temperaturas: {
+      refrigerador: { min: 0, max: 0 },
+      freezer: { min: -25, max: -15 }
+    },
+    componentes: {
+      compressor: 'Tecumseh THS1380',
+      ventilador: 'N/A',
+      termostato: 'Termostato Comercial',
+      condensador: 'Condensador Externo',
+      evaporador: 'Evaporador Serpentina'
+    },
+    particularidades: ['Fechadura de Segurança']
+  },
+  {
+    id: 'CSL-009',
+    nome: 'Geladeira Consul Facilite 400L Inox',
+    codigo: 'CRM44AK',
+    tipo: 'Refrigerador',
+    marca: 'Consul',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+CSL-009',
+    especificacoes: {
+      voltagem: '220V',
+      consumo: '430W',
+      dimensoes: { altura: '180cm', largura: '65cm', profundidade: '70cm' },
+      peso: '75kg',
+      capacidade: '400L',
+      classeEnergetica: 'A'
+    },
+    temperaturas: {
+      refrigerador: { min: 3, max: 9 },
+      freezer: { min: -16, max: -10 }
+    },
+    componentes: {
+      compressor: 'Embraco FFI12HBX',
+      ventilador: 'Ventilador Simples',
+      termostato: 'Termostato Eletrônico',
+      condensador: 'Condensador Aletado',
+      evaporador: 'Evaporador Frost Free'
+    },
+    particularidades: ['Espaço Flex no Freezer']
+  },
+  {
+    id: 'CSL-010',
+    nome: 'Geladeira Consul Facilite 386L Branca',
+    codigo: 'CRM43NB',
+    tipo: 'Refrigerador',
+    marca: 'Consul',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+CSL-010',
+    especificacoes: {
+      voltagem: '127V',
+      consumo: '410W',
+      dimensoes: { altura: '178cm', largura: '62cm', profundidade: '71cm' },
+      peso: '72kg',
+      capacidade: '386L',
+      classeEnergetica: 'A'
+    },
+    temperaturas: {
+      refrigerador: { min: 4, max: 10 },
+      freezer: { min: -15, max: -9 }
+    },
+    componentes: {
+      compressor: 'Embraco FFI10HAK',
+      ventilador: 'Ventilador Simples',
+      termostato: 'Termostato Mecânico',
+      condensador: 'Condensador Interno',
+      evaporador: 'Evaporador Frost Free'
+    },
+    particularidades: ['Controle de Temperatura Externo']
+  },
+  {
+    id: 'SMG-001',
+    nome: 'Refrigerador French Door Twin Cooling Plus 536L',
+    codigo: 'RF53DB',
+    tipo: 'Refrigerador',
+    marca: 'Samsung',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+SMG-001',
+    especificacoes: {
+      voltagem: '220V',
+      consumo: '580W',
+      dimensoes: { altura: '179cm', largura: '82cm', profundidade: '74cm' },
+      peso: '108kg',
+      capacidade: '536L',
+      classeEnergetica: 'A++'
+    },
+    temperaturas: {
+      refrigerador: { min: 1, max: 7 },
+      freezer: { min: -20, max: -16 }
+    },
+    componentes: {
+      compressor: 'Digital Inverter Samsung',
+      ventilador: 'Twin Cooling Fan',
+      termostato: 'Controle Eletrônico Digital',
+      condensador: 'Condensador Otimizado',
+      evaporador: 'Evaporador Duplo'
+    },
+    particularidades: ['Tecnologia Twin Cooling Plus', 'Dispenser de Água e Gelo']
+  },
+  {
+    id: 'SMG-002',
+    nome: 'Geladeira Bottom Mount Inverter 453L',
+    codigo: 'RB40K',
+    tipo: 'Refrigerador',
+    marca: 'Samsung',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+SMG-002',
+    especificacoes: {
+      voltagem: '127V',
+      consumo: '450W',
+      dimensoes: { altura: '185cm', largura: '70cm', profundidade: '69cm' },
+      peso: '85kg',
+      capacidade: '453L',
+      classeEnergetica: 'A'
+    },
+    temperaturas: {
+      refrigerador: { min: 2, max: 8 },
+      freezer: { min: -18, max: -12 }
+    },
+    componentes: {
+      compressor: 'Digital Inverter Samsung',
+      ventilador: 'Ventilador Interno',
+      termostato: 'Sensor Digital',
+      condensador: 'Condensador Estático Interno',
+      evaporador: 'Evaporador Frost Free'
+    },
+    particularidades: ['Compressor Digital Inverter (10 anos de garantia)']
+  },
+  {
+    id: 'SMG-003',
+    nome: 'Refrigerador Side by Side Family Hub 602L',
+    codigo: 'RS65R',
+    tipo: 'Refrigerador',
+    marca: 'Samsung',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+SMG-003',
+    especificacoes: {
+      voltagem: '220V',
+      consumo: '680W',
+      dimensoes: { altura: '178cm', largura: '91cm', profundidade: '73cm' },
+      peso: '130kg',
+      capacidade: '602L',
+      classeEnergetica: 'A++'
+    },
+    temperaturas: {
+      refrigerador: { min: 0, max: 6 },
+      freezer: { min: -22, max: -16 }
+    },
+    componentes: {
+      compressor: 'Digital Inverter Premium',
+      ventilador: 'Multi Flow Fan',
+      termostato: 'Tela Touch Family Hub',
+      condensador: 'Condensador Ventilado',
+      evaporador: 'Evaporador All Around Cooling'
+    },
+    particularidades: ['Tela Touchscreen Family Hub', 'Visão Interna (View Inside)']
+  },
+  {
+    id: 'SMG-004',
+    nome: 'Geladeira Top Mount Inverter 385L',
+    codigo: 'RT38K',
+    tipo: 'Refrigerador',
+    marca: 'Samsung',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+SMG-004',
+    especificacoes: {
+      voltagem: '127V',
+      consumo: '420W',
+      dimensoes: { altura: '178cm', largura: '67cm', profundidade: '67cm' },
+      peso: '75kg',
+      capacidade: '385L',
+      classeEnergetica: 'A'
+    },
+    temperaturas: {
+      refrigerador: { min: 3, max: 9 },
+      freezer: { min: -17, max: -11 }
+    },
+    componentes: {
+      compressor: 'Digital Inverter Samsung',
+      ventilador: 'Power Cool Fan',
+      termostato: 'Controle Eletrônico',
+      condensador: 'Condensador Interno',
+      evaporador: 'Evaporador Twin Cooling'
+    },
+    particularidades: ['Tecnologia Power Cool/Freeze']
+  },
+  {
+    id: 'SMG-005',
+    nome: 'Freezer Vertical Convertível 320L (Convertible)',
+    codigo: 'RZ32A',
+    tipo: 'Freezer',
+    marca: 'Samsung',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+SMG-005',
+    especificacoes: {
+      voltagem: '220V',
+      consumo: '400W',
+      dimensoes: { altura: '185cm', largura: '60cm', profundidade: '70cm' },
+      peso: '70kg',
+      capacidade: '320L',
+      classeEnergetica: 'A+'
+    },
+    temperaturas: {
+      refrigerador: { min: 2, max: 8 },
+      freezer: { min: -24, max: -16 }
+    },
+    componentes: {
+      compressor: 'Digital Inverter Samsung',
+      ventilador: 'Ventilador Interno',
+      termostato: 'Controle de Conversão',
+      condensador: 'Condensador Frio',
+      evaporador: 'Evaporador Multi Flow'
+    },
+    particularidades: ['Modo Freezer/Refrigerador Convertível']
+  },
+  {
+    id: 'SMG-006',
+    nome: 'Refrigerador Top Mount Twin Cooling 580L',
+    codigo: 'RT58K',
+    tipo: 'Refrigerador',
+    marca: 'Samsung',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+SMG-006',
+    especificacoes: {
+      voltagem: '127V',
+      consumo: '520W',
+      dimensoes: { altura: '188cm', largura: '84cm', profundidade: '74cm' },
+      peso: '100kg',
+      capacidade: '580L',
+      classeEnergetica: 'A+'
+    },
+    temperaturas: {
+      refrigerador: { min: 1, max: 7 },
+      freezer: { min: -20, max: -14 }
+    },
+    componentes: {
+      compressor: 'Digital Inverter Samsung',
+      ventilador: 'Twin Cooling Fan',
+      termostato: 'Painel Eletrônico Touch',
+      condensador: 'Condensador Otimizado',
+      evaporador: 'Evaporador Duplo'
+    },
+    particularidades: ['Gaveta Moisture-Free Zone']
+  },
+  {
+    id: 'SMG-007',
+    nome: 'Side by Side Inverter 617L',
+    codigo: 'RS65R3',
+    tipo: 'Refrigerador',
+    marca: 'Samsung',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+SMG-007',
+    especificacoes: {
+      voltagem: '220V',
+      consumo: '620W',
+      dimensoes: { altura: '179cm', largura: '91cm', profundidade: '74cm' },
+      peso: '120kg',
+      capacidade: '617L',
+      classeEnergetica: 'A++'
+    },
+    temperaturas: {
+      refrigerador: { min: 0, max: 6 },
+      freezer: { min: -22, max: -16 }
+    },
+    componentes: {
+      compressor: 'Digital Inverter Premium',
+      ventilador: 'Ventilador Duplo',
+      termostato: 'Painel Digital Interno',
+      condensador: 'Condensador Ventilado',
+      evaporador: 'Evaporador All Around Cooling'
+    },
+    particularidades: ['Tecnologia No Frost', 'Iluminação LED']
+  },
+  {
+    id: 'SMG-008',
+    nome: 'Refrigerador 1 Porta Grande 400L Inverter',
+    codigo: 'RR39T',
+    tipo: 'Refrigerador',
+    marca: 'Samsung',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+SMG-008',
+    especificacoes: {
+      voltagem: '127V',
+      consumo: '400W',
+      dimensoes: { altura: '185cm', largura: '59.5cm', profundidade: '64cm' },
+      peso: '70kg',
+      capacidade: '400L',
+      classeEnergetica: 'A+'
+    },
+    temperaturas: {
+      refrigerador: { min: 1, max: 7 },
+      freezer: { min: -10, max: -5 }
+    },
+    componentes: {
+      compressor: 'Digital Inverter Samsung',
+      ventilador: 'Ventilador Simples',
+      termostato: 'Controle Eletrônico',
+      condensador: 'Condensador Interno',
+      evaporador: 'Evaporador All Around Cooling'
+    },
+    particularidades: ['Design Modular e Integrável']
+  },
+  {
+    id: 'SMG-009',
+    nome: 'Freezer Vertical 1 Porta 300L Inverter',
+    codigo: 'RZ32T',
+    tipo: 'Freezer',
+    marca: 'Samsung',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+SMG-009',
+    especificacoes: {
+      voltagem: '220V',
+      consumo: '380W',
+      dimensoes: { altura: '185cm', largura: '59.5cm', profundidade: '64cm' },
+      peso: '68kg',
+      capacidade: '300L',
+      classeEnergetica: 'A+'
+    },
+    temperaturas: {
+      refrigerador: { min: 0, max: 0 },
+      freezer: { min: -24, max: -18 }
+    },
+    componentes: {
+      compressor: 'Digital Inverter Samsung',
+      ventilador: 'Power Freeze Fan',
+      termostato: 'Controle Eletrônico',
+      condensador: 'Condensador Frio',
+      evaporador: 'Evaporador Multi Flow'
+    },
+    particularidades: ['Pode ser combinado com RR39T']
+  },
+  {
+    id: 'SMG-010',
+    nome: 'Refrigerador Twin Cooling Plus 458L',
+    codigo: 'RT46K',
+    tipo: 'Refrigerador',
+    marca: 'Samsung',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+SMG-010',
+    especificacoes: {
+      voltagem: '127V',
+      consumo: '480W',
+      dimensoes: { altura: '180cm', largura: '70cm', profundidade: '70cm' },
+      peso: '80kg',
+      capacidade: '458L',
+      classeEnergetica: 'A'
+    },
+    temperaturas: {
+      refrigerador: { min: 2, max: 8 },
+      freezer: { min: -18, max: -12 }
+    },
+    componentes: {
+      compressor: 'Digital Inverter Samsung',
+      ventilador: 'Twin Cooling Fan',
+      termostato: 'Controle Eletrônico',
+      condensador: 'Condensador Otimizado',
+      evaporador: 'Evaporador Duplo'
+    },
+    particularidades: ['5 Modos de Conversão']
+  }
 ]
