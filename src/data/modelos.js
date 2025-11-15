@@ -1174,4 +1174,565 @@ export const MODELOS = [
     },
     particularidades: ['5 Modos de Conversão']
   }
+  ,
+  {
+    id: 'LG-001',
+    nome: 'Refrigerador Side by Side Inverter 611L',
+    codigo: 'GC-L228',
+    tipo: 'Refrigerador',
+    marca: 'LG',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+LG-001',
+    especificacoes: {
+      voltagem: '220V',
+      consumo: '650W',
+      dimensoes: { altura: '179cm', largura: '91cm', profundidade: '73cm' },
+      peso: '120kg',
+      capacidade: '611L',
+      classeEnergetica: 'A++'
+    },
+    temperaturas: {
+      refrigerador: { min: 1, max: 7 },
+      freezer: { min: -22, max: -16 }
+    },
+    componentes: {
+      compressor: 'Linear Inverter LG',
+      ventilador: 'Multi Air Flow Fan',
+      termostato: 'Controle Digital Touch',
+      condensador: 'Condensador Ventilado',
+      evaporador: 'Evaporador Duplo'
+    },
+    particularidades: ['Compressor Linear Inverter', 'Dispenser de Água e Gelo']
+  },
+  {
+    id: 'LG-002',
+    nome: 'Geladeira Bottom Freezer Inox 474L',
+    codigo: 'GC-B499',
+    tipo: 'Refrigerador',
+    marca: 'LG',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+LG-002',
+    especificacoes: {
+      voltagem: '127V',
+      consumo: '500W',
+      dimensoes: { altura: '185cm', largura: '70cm', profundidade: '70cm' },
+      peso: '95kg',
+      capacidade: '474L',
+      classeEnergetica: 'A'
+    },
+    temperaturas: {
+      refrigerador: { min: 2, max: 8 },
+      freezer: { min: -18, max: -12 }
+    },
+    componentes: {
+      compressor: 'Linear Inverter LG',
+      ventilador: 'Ventilador Simples',
+      termostato: 'Sensor Digital',
+      condensador: 'Condensador Estático',
+      evaporador: 'Evaporador Frost Free'
+    },
+    particularidades: ['Gaveta com Controle de Umidade']
+  },
+  {
+    id: 'LG-003',
+    nome: 'Refrigerador French Door InstaView 570L',
+    codigo: 'GC-X247',
+    tipo: 'Refrigerador',
+    marca: 'LG',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+LG-003',
+    especificacoes: {
+      voltagem: '220V',
+      consumo: '700W',
+      dimensoes: { altura: '179cm', largura: '91cm', profundidade: '73cm' },
+      peso: '135kg',
+      capacidade: '570L',
+      classeEnergetica: 'A++'
+    },
+    temperaturas: {
+      refrigerador: { min: 0, max: 6 },
+      freezer: { min: -22, max: -16 }
+    },
+    componentes: {
+      compressor: 'Linear Inverter Premium',
+      ventilador: 'Door Cooling Fan',
+      termostato: 'InstaView Door-in-Door',
+      condensador: 'Condensador Otimizado',
+      evaporador: 'Evaporador Dual Flow'
+    },
+    particularidades: ['InstaView Door-in-Door', 'Tecnologia Smart Diagnosis']
+  },
+  {
+    id: 'LG-004',
+    nome: 'Freezer Vertical No Frost 280L',
+    codigo: 'GV-B280',
+    tipo: 'Freezer',
+    marca: 'LG',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+LG-004',
+    especificacoes: {
+      voltagem: '127V',
+      consumo: '390W',
+      dimensoes: { altura: '169cm', largura: '61cm', profundidade: '69cm' },
+      peso: '70kg',
+      capacidade: '280L',
+      classeEnergetica: 'A'
+    },
+    temperaturas: {
+      refrigerador: { min: 0, max: 0 },
+      freezer: { min: -24, max: -18 }
+    },
+    componentes: {
+      compressor: 'Standard Embraco',
+      ventilador: 'Axial DC',
+      termostato: 'Termostato Eletrônico',
+      condensador: 'Condensador Frio',
+      evaporador: 'Evaporador No Frost'
+    },
+    particularidades: ['Sistema Total No Frost']
+  },
+  {
+    id: 'LG-005',
+    nome: 'Refrigerador Top Mount Inverter 438L',
+    codigo: 'GT-B438',
+    tipo: 'Refrigerador',
+    marca: 'LG',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+LG-005',
+    especificacoes: {
+      voltagem: '220V',
+      consumo: '480W',
+      dimensoes: { altura: '178cm', largura: '70cm', profundidade: '73cm' },
+      peso: '85kg',
+      capacidade: '438L',
+      classeEnergetica: 'A'
+    },
+    temperaturas: {
+      refrigerador: { min: 2, max: 8 },
+      freezer: { min: -18, max: -12 }
+    },
+    componentes: {
+      compressor: 'Linear Inverter LG',
+      ventilador: 'Multi Air Flow Fan',
+      termostato: 'Painel Eletrônico',
+      condensador: 'Condensador Otimizado',
+      evaporador: 'Evaporador Frost Free'
+    },
+    particularidades: ['Door Cooling+']
+  },
+  {
+    id: 'LG-006',
+    nome: 'Refrigerador Bottom Freezer 384L Black Glass',
+    codigo: 'GC-B404',
+    tipo: 'Refrigerador',
+    marca: 'LG',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+LG-006',
+    especificacoes: {
+      voltagem: '127V',
+      consumo: '420W',
+      dimensoes: { altura: '186cm', largura: '59.5cm', profundidade: '68cm' },
+      peso: '75kg',
+      capacidade: '384L',
+      classeEnergetica: 'A+'
+    },
+    temperaturas: {
+      refrigerador: { min: 1, max: 7 },
+      freezer: { min: -20, max: -14 }
+    },
+    componentes: {
+      compressor: 'Linear Inverter LG',
+      ventilador: 'Multi Air Flow Fan',
+      termostato: 'Controle Interno Digital',
+      condensador: 'Condensador Interno',
+      evaporador: 'Evaporador Frost Free'
+    },
+    particularidades: ['Acabamento Black Glass']
+  },
+  {
+    id: 'LG-007',
+    nome: 'Refrigerador Top Mount No Frost 374L',
+    codigo: 'GT-B374',
+    tipo: 'Refrigerador',
+    marca: 'LG',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+LG-007',
+    especificacoes: {
+      voltagem: '220V',
+      consumo: '400W',
+      dimensoes: { altura: '173cm', largura: '68cm', profundidade: '65cm' },
+      peso: '70kg',
+      capacidade: '374L',
+      classeEnergetica: 'A'
+    },
+    temperaturas: {
+      refrigerador: { min: 3, max: 9 },
+      freezer: { min: -17, max: -11 }
+    },
+    componentes: {
+      compressor: 'Standard Embraco',
+      ventilador: 'Ventilador Simples',
+      termostato: 'Termostato Mecânico',
+      condensador: 'Condensador Estático',
+      evaporador: 'Evaporador No Frost'
+    },
+    particularidades: ['Prateleiras de Vidro Resistente']
+  },
+  {
+    id: 'LG-008',
+    nome: 'Refrigerador French Door 3 Portas 480L',
+    codigo: 'GC-J480',
+    tipo: 'Refrigerador',
+    marca: 'LG',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+LG-008',
+    especificacoes: {
+      voltagem: '127V',
+      consumo: '550W',
+      dimensoes: { altura: '175cm', largura: '80cm', profundidade: '72cm' },
+      peso: '100kg',
+      capacidade: '480L',
+      classeEnergetica: 'A+'
+    },
+    temperaturas: {
+      refrigerador: { min: 1, max: 7 },
+      freezer: { min: -20, max: -14 }
+    },
+    componentes: {
+      compressor: 'Linear Inverter LG',
+      ventilador: 'Door Cooling Fan',
+      termostato: 'Painel Eletrônico',
+      condensador: 'Condensador Otimizado',
+      evaporador: 'Evaporador Frost Free'
+    },
+    particularidades: ['Smart Storage System']
+  },
+  {
+    id: 'LG-009',
+    nome: 'Freezer Horizontal 2 Portas 500L',
+    codigo: 'GR-H500',
+    tipo: 'Freezer',
+    marca: 'LG',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+LG-009',
+    especificacoes: {
+      voltagem: '220V',
+      consumo: '520W',
+      dimensoes: { altura: '94cm', largura: '150cm', profundidade: '80cm' },
+      peso: '90kg',
+      capacidade: '500L',
+      classeEnergetica: 'C'
+    },
+    temperaturas: {
+      refrigerador: { min: 0, max: 0 },
+      freezer: { min: -25, max: -15 }
+    },
+    componentes: {
+      compressor: 'Compressor Convencional',
+      ventilador: 'N/A',
+      termostato: 'Termostato Comercial',
+      condensador: 'Condensador Externo',
+      evaporador: 'Evaporador Serpentina'
+    },
+    particularidades: ['Duas Portas Independentes']
+  },
+  {
+    id: 'LG-010',
+    nome: 'Refrigerador Mini Bar/Frigobar 120L',
+    codigo: 'GR-131',
+    tipo: 'Refrigerador',
+    marca: 'LG',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+LG-010',
+    especificacoes: {
+      voltagem: '127V',
+      consumo: '180W',
+      dimensoes: { altura: '85cm', largura: '50cm', profundidade: '55cm' },
+      peso: '25kg',
+      capacidade: '120L',
+      classeEnergetica: 'A'
+    },
+    temperaturas: {
+      refrigerador: { min: 4, max: 10 },
+      freezer: { min: -6, max: -2 }
+    },
+    componentes: {
+      compressor: 'Mini Compressor Standard',
+      ventilador: 'N/A',
+      termostato: 'Termostato Analógico',
+      condensador: 'Serpentina Interna',
+      evaporador: 'Evaporador Placa'
+    },
+    particularidades: ['Tamanho Compacto']
+  },
+  {
+    id: 'MDA-001',
+    nome: 'Refrigerador Side by Side Inverter 528L',
+    codigo: 'MD-RS530',
+    tipo: 'Refrigerador',
+    marca: 'Midea',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+MDA-001',
+    especificacoes: {
+      voltagem: '220V',
+      consumo: '550W',
+      dimensoes: { altura: '178cm', largura: '90cm', profundidade: '66cm' },
+      peso: '105kg',
+      capacidade: '528L',
+      classeEnergetica: 'A+'
+    },
+    temperaturas: {
+      refrigerador: { min: 1, max: 7 },
+      freezer: { min: -20, max: -14 }
+    },
+    componentes: {
+      compressor: 'Compressor Inverter Midea',
+      ventilador: 'Multi Air Flow Fan',
+      termostato: 'Controle Eletrônico Externo',
+      condensador: 'Condensador Ventilado',
+      evaporador: 'Evaporador No Frost'
+    },
+    particularidades: ['Painel Touchscreen', 'Dispenser de Água']
+  },
+  {
+    id: 'MDA-002',
+    nome: 'Geladeira Bottom Freezer Inverter 435L',
+    codigo: 'MD-RB435',
+    tipo: 'Refrigerador',
+    marca: 'Midea',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+MDA-002',
+    especificacoes: {
+      voltagem: '127V',
+      consumo: '450W',
+      dimensoes: { altura: '185cm', largura: '70cm', profundidade: '70cm' },
+      peso: '88kg',
+      capacidade: '435L',
+      classeEnergetica: 'A'
+    },
+    temperaturas: {
+      refrigerador: { min: 2, max: 8 },
+      freezer: { min: -18, max: -12 }
+    },
+    componentes: {
+      compressor: 'Compressor Inverter Midea',
+      ventilador: 'Ventilador Interno',
+      termostato: 'Sensor Digital',
+      condensador: 'Condensador Estático',
+      evaporador: 'Evaporador Frost Free'
+    },
+    particularidades: ['Freezer com gavetas deslizantes']
+  },
+  {
+    id: 'MDA-003',
+    nome: 'Freezer Vertical Frost Free 250L',
+    codigo: 'MD-FV250',
+    tipo: 'Freezer',
+    marca: 'Midea',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+MDA-003',
+    especificacoes: {
+      voltagem: '220V',
+      consumo: '380W',
+      dimensoes: { altura: '170cm', largura: '60cm', profundidade: '65cm' },
+      peso: '65kg',
+      capacidade: '250L',
+      classeEnergetica: 'A'
+    },
+    temperaturas: {
+      refrigerador: { min: 0, max: 0 },
+      freezer: { min: -24, max: -18 }
+    },
+    componentes: {
+      compressor: 'Compressor Standard',
+      ventilador: 'Axial 12V',
+      termostato: 'Termostato Eletrônico',
+      condensador: 'Condensador Frio',
+      evaporador: 'Evaporador No Frost'
+    },
+    particularidades: ['Controle de Temperatura na Porta']
+  },
+  {
+    id: 'MDA-004',
+    nome: 'Freezer Horizontal 199L Porta Sólida',
+    codigo: 'MD-FH200',
+    tipo: 'Freezer',
+    marca: 'Midea',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+MDA-004',
+    especificacoes: {
+      voltagem: '127V',
+      consumo: '320W',
+      dimensoes: { altura: '85cm', largura: '90cm', profundidade: '60cm' },
+      peso: '45kg',
+      capacidade: '199L',
+      classeEnergetica: 'B'
+    },
+    temperaturas: {
+      refrigerador: { min: 0, max: 0 },
+      freezer: { min: -20, max: -10 }
+    },
+    componentes: {
+      compressor: 'Tecumseh THB1340Y',
+      ventilador: 'N/A',
+      termostato: 'Termostato Mecânico',
+      condensador: 'Condensador Estático',
+      evaporador: 'Evaporador Serpentina'
+    },
+    particularidades: ['Função Resfriar (Geladeira)']
+  },
+  {
+    id: 'MDA-005',
+    nome: 'Refrigerador Top Mount Frost Free 415L',
+    codigo: 'MD-RF415',
+    tipo: 'Refrigerador',
+    marca: 'Midea',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+MDA-005',
+    especificacoes: {
+      voltagem: '220V',
+      consumo: '440W',
+      dimensoes: { altura: '178cm', largura: '67cm', profundidade: '67cm' },
+      peso: '75kg',
+      capacidade: '415L',
+      classeEnergetica: 'A'
+    },
+    temperaturas: {
+      refrigerador: { min: 3, max: 9 },
+      freezer: { min: -17, max: -11 }
+    },
+    componentes: {
+      compressor: 'Compressor Standard',
+      ventilador: 'Ventilador Simples',
+      termostato: 'Painel Eletrônico',
+      condensador: 'Condensador Interno',
+      evaporador: 'Evaporador Multi Flow'
+    },
+    particularidades: ['Iluminação LED']
+  },
+  {
+    id: 'MDA-006',
+    nome: 'Refrigerador 1 Porta 310L Frost Free',
+    codigo: 'MD-R310',
+    tipo: 'Refrigerador',
+    marca: 'Midea',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+MDA-006',
+    especificacoes: {
+      voltagem: '127V',
+      consumo: '380W',
+      dimensoes: { altura: '170cm', largura: '60cm', profundidade: '65cm' },
+      peso: '65kg',
+      capacidade: '310L',
+      classeEnergetica: 'A'
+    },
+    temperaturas: {
+      refrigerador: { min: 3, max: 9 },
+      freezer: { min: -16, max: -10 }
+    },
+    componentes: {
+      compressor: 'Embraco FFI10HAK',
+      ventilador: 'Ventilador Interno',
+      termostato: 'Termostato Eletrônico',
+      condensador: 'Condensador Aletado',
+      evaporador: 'Evaporador No Frost'
+    },
+    particularidades: ['Design Clean']
+  },
+  {
+    id: 'MDA-007',
+    nome: 'Freezer Horizontal Dupla Ação 499L',
+    codigo: 'MD-FH500',
+    tipo: 'Freezer',
+    marca: 'Midea',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+MDA-007',
+    especificacoes: {
+      voltagem: '220V',
+      consumo: '500W',
+      dimensoes: { altura: '94cm', largura: '150cm', profundidade: '80cm' },
+      peso: '95kg',
+      capacidade: '499L',
+      classeEnergetica: 'C'
+    },
+    temperaturas: {
+      refrigerador: { min: 0, max: 8 },
+      freezer: { min: -20, max: -10 }
+    },
+    componentes: {
+      compressor: 'Compressor de Alta Capacidade',
+      ventilador: 'N/A',
+      termostato: 'Termostato Dupla Ação',
+      condensador: 'Condensador Externo',
+      evaporador: 'Evaporador Serpentina'
+    },
+    particularidades: ['Alta Capacidade de Armazenamento']
+  },
+  {
+    id: 'MDA-008',
+    nome: 'Refrigerador Side by Side Porta de Vidro 580L',
+    codigo: 'MD-RS580VG',
+    tipo: 'Refrigerador',
+    marca: 'Midea',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+MDA-008',
+    especificacoes: {
+      voltagem: '127V',
+      consumo: '600W',
+      dimensoes: { altura: '180cm', largura: '90cm', profundidade: '70cm' },
+      peso: '115kg',
+      capacidade: '580L',
+      classeEnergetica: 'A+'
+    },
+    temperaturas: {
+      refrigerador: { min: 0, max: 6 },
+      freezer: { min: -22, max: -16 }
+    },
+    componentes: {
+      compressor: 'Compressor Inverter Premium',
+      ventilador: 'Ventilador Duplo',
+      termostato: 'Painel Eletrônico Digital',
+      condensador: 'Condensador Ventilado',
+      evaporador: 'Evaporador Total No Frost'
+    },
+    particularidades: ['Acabamento em Vidro']
+  },
+  {
+    id: 'MDA-009',
+    nome: 'Geladeira Top Freezer Cycle Defrost 340L',
+    codigo: 'MD-R340',
+    tipo: 'Refrigerador',
+    marca: 'Midea',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+MDA-009',
+    especificacoes: {
+      voltagem: '220V',
+      consumo: '390W',
+      dimensoes: { altura: '175cm', largura: '62cm', profundidade: '71cm' },
+      peso: '68kg',
+      capacidade: '340L',
+      classeEnergetica: 'A'
+    },
+    temperaturas: {
+      refrigerador: { min: 4, max: 10 },
+      freezer: { min: -15, max: -9 }
+    },
+    componentes: {
+      compressor: 'Tecumseh THB1340Y',
+      ventilador: 'N/A',
+      termostato: 'Termostato Analógico',
+      condensador: 'Serpentina Interna',
+      evaporador: 'Evaporador Placa Fria'
+    },
+    particularidades: ['Degelo Prático']
+  },
+  {
+    id: 'MDA-010',
+    nome: 'Freezer Vertical 140L Slim',
+    codigo: 'MD-FV140',
+    tipo: 'Freezer',
+    marca: 'Midea',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+MDA-010',
+    especificacoes: {
+      voltagem: '127V',
+      consumo: '300W',
+      dimensoes: { altura: '140cm', largura: '50cm', profundidade: '60cm' },
+      peso: '50kg',
+      capacidade: '140L',
+      classeEnergetica: 'A'
+    },
+    temperaturas: {
+      refrigerador: { min: 0, max: 0 },
+      freezer: { min: -24, max: -18 }
+    },
+    componentes: {
+      compressor: 'Mini Compressor Standard',
+      ventilador: 'N/A',
+      termostato: 'Termostato Eletrônico',
+      condensador: 'Serpentina Externa',
+      evaporador: 'Evaporador Placa'
+    },
+    particularidades: ['Ideal para Espaços Pequenos']
+  }
 ]
