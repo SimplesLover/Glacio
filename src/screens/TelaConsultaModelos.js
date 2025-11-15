@@ -77,6 +77,7 @@ export default function TelaConsultaModelos() {
       )
     })
   }, [marca, q, filters])
+  const formatLabel = (k) => (k === 'classeEnergetica' ? 'Classe Energetica' : k.charAt(0).toUpperCase() + k.slice(1))
   return (
     <View style={{ flex: 1 }}>
       <AppHeader
@@ -103,7 +104,7 @@ export default function TelaConsultaModelos() {
           <View style={{ marginHorizontal: gap, marginTop: gap, borderWidth: 1, borderRadius: 12, padding: gap, backgroundColor: colors.card, borderColor: colors.border, zIndex: 10, elevation: 4 }}>
             {Object.entries(allOptions).map(([key, opts]) => (
               <View key={key} style={{ marginBottom: 8 }}>
-                <Text style={{ fontSize: fs(13), marginBottom: 6, color: colors.text }}>{key.charAt(0).toUpperCase() + key.slice(1)}</Text>
+                <Text style={{ fontSize: fs(13), marginBottom: 6, color: colors.text }}>{formatLabel(key)}</Text>
                 <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }}>
                   {opts.map(v => {
                     const selected = filters[key]?.includes(v)
