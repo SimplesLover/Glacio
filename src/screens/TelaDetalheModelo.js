@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react'
 import { View, Text, Image, StyleSheet, ScrollView, TouchableOpacity } from 'react-native'
 import AppHeader from '../components/AppHeader'
-import { useRoute } from '@react-navigation/native'
+import { useRoute, useNavigation } from '@react-navigation/native'
 import { MODELOS } from '../data/modelos'
 import { useFavoritos } from '../contexts/FavoritosContext'
 import { useThemeContext } from '../contexts/ThemeContext'
@@ -11,6 +11,7 @@ import { wp, hp, fs } from '../constants/theme'
 
 export default function TelaDetalheModelo() {
   const route = useRoute()
+  const nav = useNavigation()
   const id = route.params?.modeloId
   const modelo = useMemo(() => MODELOS.find(m => m.id === id), [id])
   const { colors } = useThemeContext()
@@ -25,9 +26,14 @@ export default function TelaDetalheModelo() {
       </View>
     )
   const fav = isFavorito(modelo.id)
+  const handleBack = () => {
+    if (nav.canGoBack()) nav.goBack()
+    else nav.navigate('TelaInicial')
+  }
   return (
-    <ScrollView>
-      <AppHeader showBack title={`Detalhes de ${modelo.nome}`} onBackPress={() => route.params?.from ? null : null} />
+    <View style={{ flex: 1 }}>
+      <AppHeader showBack title={`Detalhes do Modelo`} onBackPress={handleBack} />
+      <ScrollView>
       <View style={[styles.headerWrap, { backgroundColor: colors.card }] }>
         <Image source={{ uri: modelo.imagem }} style={styles.headerImage} />
         <TouchableOpacity style={styles.headerHeart} onPress={() => toggleFavorito(modelo.id)}>
@@ -45,6 +51,7 @@ export default function TelaDetalheModelo() {
             <Text key={k} style={[styles.specItem, { color: colors.text }]}>{k.charAt(0).toUpperCase() + k.slice(1)}: {v || 'Não especificado'}</Text>
           ))}
         </View>
+        <SpecificationTable temperaturas={modelo.temperaturas} />
         <Text style={[styles.sectionTitle, { color: colors.text, marginTop: hp(2) }]}>Especificações Técnicas</Text>
         <View style={[styles.specBox, { borderColor: colors.border }] }>
           <Text style={[styles.specItem, { color: colors.text }]}>Voltagem: {modelo.especificacoes.voltagem}</Text>
@@ -54,7 +61,6 @@ export default function TelaDetalheModelo() {
           {modelo.especificacoes.capacidade && <Text style={[styles.specItem, { color: colors.text }]}>Capacidade: {modelo.especificacoes.capacidade}</Text>}
           {modelo.especificacoes.classeEnergetica && <Text style={[styles.specItem, { color: colors.text }]}>Classe energética: {modelo.especificacoes.classeEnergetica}</Text>}
         </View>
-        <SpecificationTable temperaturas={modelo.temperaturas} />
         {modelo.particularidades?.length ? (
           <>
             <Text style={[styles.sectionTitle, { color: colors.text, marginTop: hp(2) }]}>Características Especiais</Text>
@@ -67,7 +73,8 @@ export default function TelaDetalheModelo() {
         ) : null}
         <View style={{ height: 24 }} />
       </View>
-    </ScrollView>
+      </ScrollView>
+    </View>
   )
 }
 

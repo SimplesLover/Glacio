@@ -18,37 +18,39 @@ export default function TelaInicial() {
   const { colors } = useThemeContext()
 
   return (
-    <FlatList
-      data={MARCAS}
-      keyExtractor={item => item.id}
-      numColumns={cols}
-      contentContainerStyle={{ paddingHorizontal: gap, paddingBottom: 24 }}
-      columnWrapperStyle={{ gap }}
-      ItemSeparatorComponent={() => <View style={{ height: gap }} />}
-      ListHeaderComponent={
-        <View>
-          <AppHeader />
-          <DayCard />
-          <FavoritosCarousel />
-          <Text style={{ marginHorizontal: wp(4), marginTop: hp(2), marginBottom: hp(1), fontSize: fs(16), fontWeight: '600', color: colors.text }}>Marcas</Text>
-        </View>
-      }
-      ListFooterComponent={
-        <View>
-          <AnuncioCarousel />
-          <View style={{ height: 24 }} />
-        </View>
-      }
-      renderItem={({ item }) => (
-        <TouchableOpacity
-          style={[styles.card, { width: itemWidth, backgroundColor: colors.card, borderColor: colors.border }]}
-          onPress={() => nav.navigate('TelaConsultaModelos', { marca: item.nome })}
-        >
-          <Image source={{ uri: item.logo }} style={styles.logo} />
-          <Text style={[styles.name, { color: colors.text }]} numberOfLines={1}>{item.nome}</Text>
-        </TouchableOpacity>
-      )}
-    />
+    <View style={{ flex: 1 }}>
+      <AppHeader />
+      <FlatList
+        data={MARCAS}
+        keyExtractor={item => item.id}
+        numColumns={cols}
+        contentContainerStyle={{ paddingHorizontal: 5, paddingBottom: 24 }}
+        columnWrapperStyle={{ gap }}
+        ItemSeparatorComponent={() => <View style={{ height: gap }} />}
+        ListHeaderComponent={
+          <View>
+            <DayCard />
+            <FavoritosCarousel />
+            <Text style={{ marginHorizontal: wp(4), marginTop: hp(2), marginBottom: hp(1), fontSize: fs(16), fontWeight: '600', color: colors.text }}>Marcas</Text>
+          </View>
+        }
+        ListFooterComponent={
+          <View>
+            <AnuncioCarousel />
+            <View style={{ height: 24 }} />
+          </View>
+        }
+        renderItem={({ item }) => (
+          <TouchableOpacity
+            style={[styles.card, { width: itemWidth, backgroundColor: colors.card, borderColor: colors.border }]}
+            onPress={() => nav.navigate('TelaConsultaModelos', { marca: item.nome })}
+          >
+            <Image source={{ uri: item.logo }} style={styles.logo} />
+            <Text style={[styles.name, { color: colors.text }]} numberOfLines={1}>{item.nome}</Text>
+          </TouchableOpacity>
+        )}
+      />
+    </View>
   )
 }
 

@@ -1,9 +1,9 @@
 import React, { useMemo } from 'react'
-import { View, Text, FlatList, TouchableOpacity, Image, StyleSheet } from 'react-native'
+import { View, Text, FlatList, TouchableOpacity, Image, StyleSheet, useWindowDimensions } from 'react-native'
 import { MODELOS } from '../data/modelos'
 import { useNavigation } from '@react-navigation/native'
 import { useThemeContext } from '../contexts/ThemeContext'
-import { wp, hp, fs } from '../constants/theme'
+import { wp, fs } from '../constants/theme'
 
 function pickHighlights() {
   const shuffled = [...MODELOS].sort(() => Math.random() - 0.5)
@@ -14,6 +14,10 @@ export default function AnuncioCarousel() {
   const { colors } = useThemeContext()
   const nav = useNavigation()
   const items = useMemo(() => pickHighlights(), [])
+  const { width } = useWindowDimensions()
+  const cols = useMemo(() => (width < 360 ? 2 : width < 720 ? 3 : 4), [width])
+  const gap = wp(2)
+  const itemSize = (width - gap * (cols + 1)) / cols
   return (
     <View style={styles.container}>
       <Text style={[styles.title, { color: colors.text }]}>Novidades</Text>
@@ -22,9 +26,11 @@ export default function AnuncioCarousel() {
         data={items}
         keyExtractor={item => item.id}
         showsHorizontalScrollIndicator={false}
+        contentContainerStyle={{ paddingHorizontal: 5 }}
+        ItemSeparatorComponent={() => <View style={{ width: wp(2) }} />}
         renderItem={({ item }) => (
-          <TouchableOpacity onPress={() => nav.navigate('TelaDetalheModelo', { modeloId: item.id })} style={[styles.card, { backgroundColor: colors.card }] }>
-            <Image source={{ uri: item.imagem }} style={styles.image} />
+          <TouchableOpacity onPress={() => nav.navigate('TelaDetalheModelo', { modeloId: item.id })} style={[styles.card, { width: itemSize, height: itemSize, backgroundColor: colors.card, borderColor: colors.border }] }>
+            <Image source={{ uri: item.imagem }} style={{ width: '100%', height: '100%' }} />
             <View style={styles.overlay}>
               <Text style={styles.overlayText}>{item.nome}</Text>
               <Text style={styles.overlaySub}>{item.codigo}</Text>
@@ -38,9 +44,8 @@ export default function AnuncioCarousel() {
 
 const styles = StyleSheet.create({
   container: { marginTop: hp(2), marginBottom: hp(2) },
-  title: { marginHorizontal: wp(4), marginBottom: hp(1), fontSize: fs(16), fontWeight: '600' },
-  card: { width: wp(85), marginLeft: wp(4), borderRadius: 12, overflow: 'hidden', position: 'relative' },
-  image: { width: '100%', height: hp(22) },
+  title: { paddingHorizontal: 5, marginBottom: hp(1), fontSize: fs(16), fontWeight: '600' },
+  card: { borderRadius: 12, overflow: 'hidden', position: 'relative', borderWidth: 1 },
   overlay: { position: 'absolute', bottom: 0, left: 0, right: 0, padding: wp(3), backgroundColor: 'rgba(0,0,0,0.35)' },
   overlayText: { color: '#fff', fontSize: fs(14), fontWeight: '700' },
   overlaySub: { color: '#fff', fontSize: fs(12), marginTop: 2 }

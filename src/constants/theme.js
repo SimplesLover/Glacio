@@ -6,6 +6,15 @@ export const wp = p => (SCREEN_WIDTH * p) / 100
 export const hp = p => (SCREEN_HEIGHT * p) / 100
 export const fs = size => Math.round(PixelRatio.roundToNearestPixel(size))
 
+try {
+  const g = typeof globalThis !== 'undefined' ? globalThis : (typeof global !== 'undefined' ? global : undefined)
+  if (g) {
+    if (!g.wp) g.wp = wp
+    if (!g.hp) g.hp = hp
+    if (!g.fs) g.fs = fs
+  }
+} catch (e) {}
+
 export const lightColors = {
   primaryDark: '#5086c1',
   primary: '#6a9eda',

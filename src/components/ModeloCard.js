@@ -30,7 +30,7 @@ export default function ModeloCard({ item, onPress }) {
 
 const styles = StyleSheet.create({
   card: { borderRadius: 12, overflow: 'hidden' },
-  imageWrap: { height: hp(14) },
+  imageWrap: { aspectRatio: 1 },
   image: { width: '100%', height: '100%' },
   heart: { position: 'absolute', right: 8, top: 8, padding: 6, borderRadius: 16, backgroundColor: 'rgba(0,0,0,0.15)' },
   info: { padding: wp(3) },
