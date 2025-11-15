@@ -24,8 +24,20 @@ export default function TelaConsultaModelos() {
     const marcas = MARCAS.map(m => m.nome)
     const tipo = Array.from(new Set(MODELOS.map(m => m.tipo)))
     const voltagem = Array.from(new Set(MODELOS.map(m => m.especificacoes.voltagem)))
-    const consumo = Array.from(new Set(MODELOS.map(m => m.especificacoes.consumo)))
-    const capacidade = Array.from(new Set(MODELOS.map(m => m.especificacoes.capacidade).filter(Boolean)))
+    const consumoNums = MODELOS.map(m => m.especificacoes.consumo).filter(Boolean).map(s => parseInt(String(s).replace(/\D/g, ''))).filter(n => !isNaN(n))
+    const capNums = MODELOS.map(m => m.especificacoes.capacidade).filter(Boolean).map(s => parseInt(String(s).replace(/\D/g, ''))).filter(n => !isNaN(n))
+    const buildBuckets = (nums, suffix) => {
+      if (!nums.length) return []
+      const min = Math.min(...nums)
+      const max = Math.max(...nums)
+      const start = Math.floor(min / 100) * 100
+      const end = Math.ceil(max / 100) * 100
+      const arr = []
+      for (let s = start; s < end; s += 100) arr.push(`${s}${suffix}-${s + 100}${suffix}`)
+      return arr
+    }
+    const consumo = buildBuckets(consumoNums, 'W')
+    const capacidade = buildBuckets(capNums, 'L')
     const classeEnergetica = Array.from(new Set(MODELOS.map(m => m.especificacoes.classeEnergetica).filter(Boolean)))
     return { marcas, tipo, voltagem, consumo, capacidade, classeEnergetica }
   }, [])
@@ -36,8 +48,20 @@ export default function TelaConsultaModelos() {
       const okMarca = !f.marcas.length || f.marcas.includes(m.marca)
       const okTipo = !f.tipo.length || f.tipo.includes(m.tipo)
       const okVolt = !f.voltagem.length || f.voltagem.includes(m.especificacoes.voltagem)
-      const okCons = !f.consumo.length || f.consumo.includes(m.especificacoes.consumo)
-      const okCap = !f.capacidade.length || f.capacidade.includes(m.especificacoes.capacidade)
+      const cVal = parseInt(String(m.especificacoes.consumo || '').replace(/\D/g, ''))
+      const okCons = !f.consumo.length || (!isNaN(cVal) && f.consumo.some(r => {
+        const parts = String(r).replace(/[^\d-]/g, '').split('-')
+        const from = parseInt(parts[0])
+        const to = parseInt(parts[1])
+        return !isNaN(from) && !isNaN(to) && cVal >= from && cVal <= to
+      }))
+      const capVal = parseInt(String(m.especificacoes.capacidade || '').replace(/\D/g, ''))
+      const okCap = !f.capacidade.length || (!isNaN(capVal) && f.capacidade.some(r => {
+        const parts = String(r).replace(/[^\d-]/g, '').split('-')
+        const from = parseInt(parts[0])
+        const to = parseInt(parts[1])
+        return !isNaN(from) && !isNaN(to) && capVal >= from && capVal <= to
+      }))
       const okClasse = !f.classeEnergetica.length || f.classeEnergetica.includes(m.especificacoes.classeEnergetica)
       return okMarca && okTipo && okVolt && okCons && okCap && okClasse
     })

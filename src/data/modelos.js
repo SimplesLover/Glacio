@@ -2296,4 +2296,565 @@ export const MODELOS = [
     },
     particularidades: ['Uso Comercial (Armazenamento)']
   }
+  ,
+  {
+    id: 'FRC-001',
+    nome: 'Freezer Horizontal Tampa Cega 503L Dupla Ação',
+    codigo: 'HAE-503',
+    tipo: 'Freezer',
+    marca: 'Fricon',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+FRC-001',
+    especificacoes: {
+      voltagem: '220V',
+      consumo: '520W',
+      dimensoes: { altura: '94cm', largura: '150cm', profundidade: '80cm' },
+      peso: '95kg',
+      capacidade: '503L',
+      classeEnergetica: 'B'
+    },
+    temperaturas: {
+      refrigerador: { min: 0, max: 8 },
+      freezer: { min: -20, max: -10 }
+    },
+    componentes: {
+      compressor: 'Embraco NEK2134GK',
+      ventilador: 'N/A',
+      termostato: 'Termostato Dupla Ação',
+      condensador: 'Condensador Estático',
+      evaporador: 'Evaporador Serpentina'
+    },
+    particularidades: ['Controlador de Temperatura com Dupla Ação']
+  },
+  {
+    id: 'FRC-002',
+    nome: 'Expositor Vertical de Bebidas Porta de Vidro 414L',
+    codigo: 'VC-410',
+    tipo: 'Refrigerador',
+    marca: 'Fricon',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+FRC-002',
+    especificacoes: {
+      voltagem: '127V',
+      consumo: '500W',
+      dimensoes: { altura: '195cm', largura: '65cm', profundidade: '65cm' },
+      peso: '98kg',
+      capacidade: '414L',
+      classeEnergetica: 'C'
+    },
+    temperaturas: {
+      refrigerador: { min: 2, max: 8 },
+      freezer: { min: 0, max: 0 }
+    },
+    componentes: {
+      compressor: 'Tecumseh THS1380',
+      ventilador: 'Ventilador Evaporador',
+      termostato: 'Controlador Eletrônico',
+      condensador: 'Condensador Ventilado',
+      evaporador: 'Evaporador Forçado'
+    },
+    particularidades: ['Iluminação LED e Porta de Vidro Baixa Emissividade']
+  },
+  {
+    id: 'FRC-003',
+    nome: 'Freezer Vertical Slim Porta Cega 300L',
+    codigo: 'FV-300',
+    tipo: 'Freezer',
+    marca: 'Fricon',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+FRC-003',
+    especificacoes: {
+      voltagem: '220V',
+      consumo: '400W',
+      dimensoes: { altura: '180cm', largura: '60cm', profundidade: '65cm' },
+      peso: '80kg',
+      capacidade: '300L',
+      classeEnergetica: 'C'
+    },
+    temperaturas: {
+      refrigerador: { min: 0, max: 0 },
+      freezer: { min: -24, max: -18 }
+    },
+    componentes: {
+      compressor: 'Standard Embraco',
+      ventilador: 'Ventilador Evaporador',
+      termostato: 'Controlador Digital',
+      condensador: 'Condensador Aletado',
+      evaporador: 'Evaporador Forçado'
+    },
+    particularidades: ['Uso Comercial (Congelamento)']
+  },
+  {
+    id: 'FRC-004',
+    nome: 'Freezer Horizontal Tampa de Vidro Curvo 200L',
+    codigo: 'HVT-200',
+    tipo: 'Freezer',
+    marca: 'Fricon',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+FRC-004',
+    especificacoes: {
+      voltagem: '127V',
+      consumo: '350W',
+      dimensoes: { altura: '94cm', largura: '90cm', profundidade: '70cm' },
+      peso: '60kg',
+      capacidade: '200L',
+      classeEnergetica: 'D'
+    },
+    temperaturas: {
+      refrigerador: { min: 0, max: 0 },
+      freezer: { min: -25, max: -15 }
+    },
+    componentes: {
+      compressor: 'Tecumseh THB1340Y',
+      ventilador: 'N/A',
+      termostato: 'Termostato Comercial',
+      condensador: 'Condensador Estático',
+      evaporador: 'Evaporador Serpentina'
+    },
+    particularidades: ['Tampa de Vidro Curvo Deslizante']
+  },
+  {
+    id: 'FRC-005',
+    nome: 'Expositor Vertical para Congelados 500L',
+    codigo: 'VCG-500',
+    tipo: 'Freezer',
+    marca: 'Fricon',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+FRC-005',
+    especificacoes: {
+      voltagem: '220V',
+      consumo: '550W',
+      dimensoes: { altura: '200cm', largura: '70cm', profundidade: '75cm' },
+      peso: '110kg',
+      capacidade: '500L',
+      classeEnergetica: 'D'
+    },
+    temperaturas: {
+      refrigerador: { min: 0, max: 0 },
+      freezer: { min: -24, max: -18 }
+    },
+    componentes: {
+      compressor: 'Compressor de Alta Capacidade',
+      ventilador: 'Ventilador Evaporador',
+      termostato: 'Controlador Eletrônico',
+      condensador: 'Condensador Ventilado',
+      evaporador: 'Evaporador Forçado'
+    },
+    particularidades: ['Display Digital de Temperatura']
+  },
+  {
+    id: 'FRC-006',
+    nome: 'Cervejeira Expositora 324L',
+    codigo: 'RC-324C',
+    tipo: 'Refrigerador',
+    marca: 'Fricon',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+FRC-006',
+    especificacoes: {
+      voltagem: '127V',
+      consumo: '480W',
+      dimensoes: { altura: '190cm', largura: '60cm', profundidade: '65cm' },
+      peso: '90kg',
+      capacidade: '324L',
+      classeEnergetica: 'C'
+    },
+    temperaturas: {
+      refrigerador: { min: -6, max: 2 },
+      freezer: { min: 0, max: 0 }
+    },
+    componentes: {
+      compressor: 'Embraco NEK2134GK',
+      ventilador: 'Ventilador Evaporador Duplo',
+      termostato: 'Controlador Eletrônico',
+      condensador: 'Condensador Aletado',
+      evaporador: 'Evaporador Forçado'
+    },
+    particularidades: ['Gela Rapidamente']
+  },
+  {
+    id: 'FRC-007',
+    nome: 'Freezer Horizontal 2 Portas 620L',
+    codigo: 'HAE-620',
+    tipo: 'Freezer',
+    marca: 'Fricon',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+FRC-007',
+    especificacoes: {
+      voltagem: '220V',
+      consumo: '600W',
+      dimensoes: { altura: '94cm', largura: '180cm', profundidade: '80cm' },
+      peso: '115kg',
+      capacidade: '620L',
+      classeEnergetica: 'B'
+    },
+    temperaturas: {
+      refrigerador: { min: 0, max: 0 },
+      freezer: { min: -25, max: -15 }
+    },
+    componentes: {
+      compressor: 'Compressor de Grande Porte',
+      ventilador: 'N/A',
+      termostato: 'Termostato Comercial',
+      condensador: 'Condensador Estático',
+      evaporador: 'Evaporador Serpentina'
+    },
+    particularidades: ['Fechadura de Segurança']
+  },
+  {
+    id: 'FRC-008',
+    nome: 'Expositor Vertical de Sorvetes 450L',
+    codigo: 'VCG-450S',
+    tipo: 'Freezer',
+    marca: 'Fricon',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+FRC-008',
+    especificacoes: {
+      voltagem: '127V',
+      consumo: '520W',
+      dimensoes: { altura: '190cm', largura: '65cm', profundidade: '70cm' },
+      peso: '105kg',
+      capacidade: '450L',
+      classeEnergetica: 'D'
+    },
+    temperaturas: {
+      refrigerador: { min: 0, max: 0 },
+      freezer: { min: -20, max: -15 }
+    },
+    componentes: {
+      compressor: 'Standard Embraco',
+      ventilador: 'Ventilador Evaporador',
+      termostato: 'Controlador Eletrônico',
+      condensador: 'Condensador Ventilado',
+      evaporador: 'Evaporador Forçado'
+    },
+    particularidades: ['Porta de Vidro Baixa Emissividade']
+  },
+  {
+    id: 'FRC-009',
+    nome: 'Expositor Vertical para Laticínios 500L',
+    codigo: 'VC-500L',
+    tipo: 'Refrigerador',
+    marca: 'Fricon',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+FRC-009',
+    especificacoes: {
+      voltagem: '220V',
+      consumo: '550W',
+      dimensoes: { altura: '205cm', largura: '70cm', profundidade: '75cm' },
+      peso: '115kg',
+      capacidade: '500L',
+      classeEnergetica: 'C'
+    },
+    temperaturas: {
+      refrigerador: { min: 2, max: 8 },
+      freezer: { min: 0, max: 0 }
+    },
+    componentes: {
+      compressor: 'Compressor de Alta Capacidade',
+      ventilador: 'Ventilador de Alta Vazão',
+      termostato: 'Controlador Digital',
+      condensador: 'Condensador Aletado',
+      evaporador: 'Evaporador Forçado'
+    },
+    particularidades: ['Prateleiras Aramadas Reguláveis']
+  },
+  {
+    id: 'FRC-010',
+    nome: 'Freezer Vertical Porta de Vidro 210L',
+    codigo: 'FV-210P',
+    tipo: 'Freezer',
+    marca: 'Fricon',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+FRC-010',
+    especificacoes: {
+      voltagem: '127V',
+      consumo: '380W',
+      dimensoes: { altura: '170cm', largura: '50cm', profundidade: '60cm' },
+      peso: '70kg',
+      capacidade: '210L',
+      classeEnergetica: 'D'
+    },
+    temperaturas: {
+      refrigerador: { min: 0, max: 0 },
+      freezer: { min: -22, max: -16 }
+    },
+    componentes: {
+      compressor: 'Standard Embraco',
+      ventilador: 'Ventilador Evaporador',
+      termostato: 'Controlador Eletrônico',
+      condensador: 'Condensador Frio',
+      evaporador: 'Evaporador Forçado'
+    },
+    particularidades: ['Ideal para Exposição de Congelados']
+  },
+  {
+    id: 'GLP-001',
+    nome: 'Refrigerador Expositor Vertical para Bebidas 573L',
+    codigo: 'GPTU-570',
+    tipo: 'Refrigerador',
+    marca: 'Gelopar',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+GLP-001',
+    especificacoes: {
+      voltagem: '220V',
+      consumo: '600W',
+      dimensoes: { altura: '205cm', largura: '75cm', profundidade: '75cm' },
+      peso: '120kg',
+      capacidade: '573L',
+      classeEnergetica: 'C'
+    },
+    temperaturas: {
+      refrigerador: { min: 2, max: 8 },
+      freezer: { min: 0, max: 0 }
+    },
+    componentes: {
+      compressor: 'Embraco NEU2170U',
+      ventilador: 'Ventilador de Alta Vazão',
+      termostato: 'Controlador Eletrônico Digital',
+      condensador: 'Condensador Ventilado',
+      evaporador: 'Evaporador Forçado'
+    },
+    particularidades: ['Iluminação LED e Porta de Vidro']
+  },
+  {
+    id: 'GLP-002',
+    nome: 'Freezer Horizontal Tampa Cega 500L Dupla Ação',
+    codigo: 'GHDE-500',
+    tipo: 'Freezer',
+    marca: 'Gelopar',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+GLP-002',
+    especificacoes: {
+      voltagem: '127V',
+      consumo: '520W',
+      dimensoes: { altura: '94cm', largura: '150cm', profundidade: '80cm' },
+      peso: '95kg',
+      capacidade: '500L',
+      classeEnergetica: 'B'
+    },
+    temperaturas: {
+      refrigerador: { min: 0, max: 8 },
+      freezer: { min: -20, max: -10 }
+    },
+    componentes: {
+      compressor: 'Tecumseh THS1380',
+      ventilador: 'N/A',
+      termostato: 'Termostato Dupla Ação',
+      condensador: 'Condensador Estático',
+      evaporador: 'Evaporador Serpentina'
+    },
+    particularidades: ['Fechadura e Dreno Frontal']
+  },
+  {
+    id: 'GLP-003',
+    nome: 'Refrigerador Cervejeiro Porta de Vidro 324L',
+    codigo: 'GRBA-320',
+    tipo: 'Refrigerador',
+    marca: 'Gelopar',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+GLP-003',
+    especificacoes: {
+      voltagem: '220V',
+      consumo: '480W',
+      dimensoes: { altura: '190cm', largura: '60cm', profundidade: '65cm' },
+      peso: '90kg',
+      capacidade: '324L',
+      classeEnergetica: 'C'
+    },
+    temperaturas: {
+      refrigerador: { min: -6, max: 2 },
+      freezer: { min: 0, max: 0 }
+    },
+    componentes: {
+      compressor: 'Embraco FFI12HBX',
+      ventilador: 'Ventilador Evaporador',
+      termostato: 'Controlador Eletrônico',
+      condensador: 'Condensador Aletado',
+      evaporador: 'Evaporador Forçado'
+    },
+    particularidades: ['Display de Temperatura']
+  },
+  {
+    id: 'GLP-004',
+    nome: 'Freezer Expositor Horizontal Tampa de Vidro 410L',
+    codigo: 'GEVU-410',
+    tipo: 'Freezer',
+    marca: 'Gelopar',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+GLP-004',
+    especificacoes: {
+      voltagem: '127V',
+      consumo: '450W',
+      dimensoes: { altura: '94cm', largura: '130cm', profundidade: '70cm' },
+      peso: '75kg',
+      capacidade: '410L',
+      classeEnergetica: 'D'
+    },
+    temperaturas: {
+      refrigerador: { min: 0, max: 0 },
+      freezer: { min: -25, max: -15 }
+    },
+    componentes: {
+      compressor: 'Tecumseh THS1380',
+      ventilador: 'N/A',
+      termostato: 'Termostato Comercial',
+      condensador: 'Condensador Estático',
+      evaporador: 'Evaporador Serpentina'
+    },
+    particularidades: ['Ideal para Sorvetes e Congelados']
+  },
+  {
+    id: 'GLP-005',
+    nome: 'Refrigerador Expositor para Laticínios e Frios 450L',
+    codigo: 'GELU-450',
+    tipo: 'Refrigerador',
+    marca: 'Gelopar',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+GLP-005',
+    especificacoes: {
+      voltagem: '220V',
+      consumo: '500W',
+      dimensoes: { altura: '195cm', largura: '65cm', profundidade: '65cm' },
+      peso: '100kg',
+      capacidade: '450L',
+      classeEnergetica: 'C'
+    },
+    temperaturas: {
+      refrigerador: { min: 2, max: 8 },
+      freezer: { min: 0, max: 0 }
+    },
+    componentes: {
+      compressor: 'Standard Embraco',
+      ventilador: 'Ventilador Evaporador',
+      termostato: 'Controlador Eletrônico',
+      condensador: 'Condensador Ventilado',
+      evaporador: 'Evaporador Forçado'
+    },
+    particularidades: ['Prateleiras em Aramado']
+  },
+  {
+    id: 'GLP-006',
+    nome: 'Freezer Vertical Porta de Vidro 520L',
+    codigo: 'GPTU-520G',
+    tipo: 'Freezer',
+    marca: 'Gelopar',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+GLP-006',
+    especificacoes: {
+      voltagem: '127V',
+      consumo: '550W',
+      dimensoes: { altura: '205cm', largura: '75cm', profundidade: '75cm' },
+      peso: '110kg',
+      capacidade: '520L',
+      classeEnergetica: 'D'
+    },
+    temperaturas: {
+      refrigerador: { min: 0, max: 0 },
+      freezer: { min: -24, max: -18 }
+    },
+    componentes: {
+      compressor: 'Compressor de Alta Capacidade',
+      ventilador: 'Ventilador Evaporador',
+      termostato: 'Controlador Digital',
+      condensador: 'Condensador Aletado',
+      evaporador: 'Evaporador Forçado'
+    },
+    particularidades: ['Sistema de Aquecimento na Porta']
+  },
+  {
+    id: 'GLP-007',
+    nome: 'Refrigerador Mini Expositor 120L',
+    codigo: 'GRBA-120',
+    tipo: 'Refrigerador',
+    marca: 'Gelopar',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+GLP-007',
+    especificacoes: {
+      voltagem: '220V',
+      consumo: '250W',
+      dimensoes: { altura: '90cm', largura: '50cm', profundidade: '55cm' },
+      peso: '35kg',
+      capacidade: '120L',
+      classeEnergetica: 'A'
+    },
+    temperaturas: {
+      refrigerador: { min: 2, max: 8 },
+      freezer: { min: 0, max: 0 }
+    },
+    componentes: {
+      compressor: 'Mini Compressor Standard',
+      ventilador: 'Ventilador Interno',
+      termostato: 'Termostato Analógico',
+      condensador: 'Serpentina Interna',
+      evaporador: 'Evaporador Placa'
+    },
+    particularidades: ['Tamanho de Balcão']
+  },
+  {
+    id: 'GLP-008',
+    nome: 'Freezer Horizontal Tampa Cega 309L Dupla Ação',
+    codigo: 'GHDE-310',
+    tipo: 'Freezer',
+    marca: 'Gelopar',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+GLP-008',
+    especificacoes: {
+      voltagem: '127V',
+      consumo: '400W',
+      dimensoes: { altura: '94cm', largura: '110cm', profundidade: '70cm' },
+      peso: '65kg',
+      capacidade: '309L',
+      classeEnergetica: 'B'
+    },
+    temperaturas: {
+      refrigerador: { min: 0, max: 8 },
+      freezer: { min: -20, max: -10 }
+    },
+    componentes: {
+      compressor: 'Standard Embraco',
+      ventilador: 'N/A',
+      termostato: 'Termostato Dupla Ação',
+      condensador: 'Condensador Estático',
+      evaporador: 'Evaporador Serpentina'
+    },
+    particularidades: ['Pode ser usado como Geladeira']
+  },
+  {
+    id: 'GLP-009',
+    nome: 'Refrigerador Expositor Vertical Slim 400L',
+    codigo: 'GPTU-400',
+    tipo: 'Refrigerador',
+    marca: 'Gelopar',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+GLP-009',
+    especificacoes: {
+      voltagem: '220V',
+      consumo: '480W',
+      dimensoes: { altura: '195cm', largura: '60cm', profundidade: '65cm' },
+      peso: '95kg',
+      capacidade: '400L',
+      classeEnergetica: 'C'
+    },
+    temperaturas: {
+      refrigerador: { min: 2, max: 8 },
+      freezer: { min: 0, max: 0 }
+    },
+    componentes: {
+      compressor: 'Tecumseh THS1380',
+      ventilador: 'Ventilador Evaporador',
+      termostato: 'Controlador Eletrônico',
+      condensador: 'Condensador Ventilado',
+      evaporador: 'Evaporador Forçado'
+    },
+    particularidades: ['Design Slim para Corredores']
+  },
+  {
+    id: 'GLP-010',
+    nome: 'Freezer Vertical Porta Cega 410L',
+    codigo: 'GPTF-410',
+    tipo: 'Freezer',
+    marca: 'Gelopar',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+GLP-010',
+    especificacoes: {
+      voltagem: '127V',
+      consumo: '450W',
+      dimensoes: { altura: '195cm', largura: '65cm', profundidade: '65cm' },
+      peso: '90kg',
+      capacidade: '410L',
+      classeEnergetica: 'C'
+    },
+    temperaturas: {
+      refrigerador: { min: 0, max: 0 },
+      freezer: { min: -24, max: -18 }
+    },
+    componentes: {
+      compressor: 'Standard Embraco',
+      ventilador: 'Ventilador Evaporador',
+      termostato: 'Controlador Digital',
+      condensador: 'Condensador Aletado',
+      evaporador: 'Evaporador Forçado'
+    },
+    particularidades: ['Armazenamento de Grande Volume']
+  }
 ]
