@@ -30,8 +30,6 @@ export default function FavoritosCarousel() {
         data={items}
         keyExtractor={item => item.id}
         showsHorizontalScrollIndicator={false}
-        contentContainerStyle={{ paddingHorizontal: 5 }}
-        ItemSeparatorComponent={() => <View style={{ width: wp(2) }} />}
         renderItem={({ item }) => (
           <TouchableOpacity onPress={() => nav.navigate('TelaDetalheModelo', { modeloId: item.id })} style={[styles.card, { width: itemWidth, backgroundColor: colors.card, borderColor: colors.border }] }>
             <Image source={{ uri: item.imagem }} style={styles.image} />
@@ -45,9 +43,9 @@ export default function FavoritosCarousel() {
 
 const styles = StyleSheet.create({
   container: { marginTop: hp(2) },
-  title: { paddingHorizontal: 5, marginBottom: hp(1), fontSize: fs(16), fontWeight: '600' },
-  empty: { marginHorizontal: 0, fontSize: fs(13) },
-  card: { borderRadius: 12, overflow: 'hidden', borderWidth: 1 },
+  title: { marginHorizontal: wp(2), marginBottom: hp(1), fontSize: fs(16), fontWeight: '600' },
+  empty: { marginHorizontal: wp(2), fontSize: fs(13) },
+  card: { marginLeft: wp(2), borderRadius: 12, overflow: 'hidden', borderWidth: 1 },
   image: { width: '100%', aspectRatio: 1 },
   name: { padding: wp(3), fontSize: fs(14) }
 })

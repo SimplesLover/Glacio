@@ -37,9 +37,9 @@ const styles = StyleSheet.create({
   rowTop: { height: hp(11), paddingHorizontal: wp(4), flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingTop: 0 },
   leftGroup: { flexDirection: 'row', alignItems: 'center' },
   title: { fontSize: fs(20), fontWeight: '600' },
-  subtitle: { fontSize: fs(12), paddingLeft: wp(1) },
+  subtitle: { fontSize: fs(12) },
   button: { padding: 8, borderRadius: 24 },
   iconBtn: { padding: 8 },
-  bottomTextWrap: { paddingHorizontal: wp(4), paddingTop: 0, paddingBottom: 0, marginTop: -hp(0.5), width: '100%' },
-  bottom: { paddingHorizontal: wp(4), paddingBottom: hp(1) - 2, width: '100%' }
+  bottomTextWrap: { paddingHorizontal: wp(4), paddingBottom: 5, marginTop: 0, width: '100%' },
+  bottom: { paddingHorizontal: wp(4), paddingBottom: 5, width: '100%' }
 })

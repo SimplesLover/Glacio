@@ -31,7 +31,7 @@ export default function DayCard() {
 
 const styles = StyleSheet.create({
   card: {
-    marginHorizontal: 0,
+    marginHorizontal: wp(2),
     marginTop: hp(2),
     padding: wp(4),
     borderRadius: 12,

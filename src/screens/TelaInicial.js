@@ -24,14 +24,14 @@ export default function TelaInicial() {
         data={MARCAS}
         keyExtractor={item => item.id}
         numColumns={cols}
-        contentContainerStyle={{ paddingHorizontal: 5, paddingBottom: 24 }}
+        contentContainerStyle={{ paddingHorizontal: gap, paddingBottom: 24 }}
         columnWrapperStyle={{ gap }}
         ItemSeparatorComponent={() => <View style={{ height: gap }} />}
         ListHeaderComponent={
           <View>
             <DayCard />
             <FavoritosCarousel />
-            <Text style={{ marginHorizontal: wp(4), marginTop: hp(2), marginBottom: hp(1), fontSize: fs(16), fontWeight: '600', color: colors.text }}>Marcas</Text>
+            <Text style={{ marginHorizontal: wp(2), marginTop: hp(2), marginBottom: hp(1), fontSize: fs(16), fontWeight: '600', color: colors.text }}>Marcas</Text>
           </View>
         }
         ListFooterComponent={
