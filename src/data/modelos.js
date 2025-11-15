@@ -1735,4 +1735,565 @@ export const MODELOS = [
     },
     particularidades: ['Ideal para Espaços Pequenos']
   }
+  ,
+  {
+    id: 'PHC-001',
+    nome: 'Refrigerador French Door Eco Inverter 482L',
+    codigo: 'PRF500I',
+    tipo: 'Refrigerador',
+    marca: 'Philco',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+PHC-001',
+    especificacoes: {
+      voltagem: '220V',
+      consumo: '520W',
+      dimensoes: { altura: '185cm', largura: '83cm', profundidade: '70cm' },
+      peso: '98kg',
+      capacidade: '482L',
+      classeEnergetica: 'A+'
+    },
+    temperaturas: {
+      refrigerador: { min: 1, max: 7 },
+      freezer: { min: -20, max: -14 }
+    },
+    componentes: {
+      compressor: 'Compressor Eco Inverter Philco',
+      ventilador: 'Multi Flow Fan',
+      termostato: 'Painel Eletrônico Digital',
+      condensador: 'Condensador Otimizado',
+      evaporador: 'Evaporador Frost Free'
+    },
+    particularidades: ['Tecnologia Eco Inverter', 'Função Smart Cooling']
+  },
+  {
+    id: 'PHC-002',
+    nome: 'Geladeira Top Freezer Retrô 300L Vermelha',
+    codigo: 'PRD300R',
+    tipo: 'Refrigerador',
+    marca: 'Philco',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+PHC-002',
+    especificacoes: {
+      voltagem: '127V',
+      consumo: '350W',
+      dimensoes: { altura: '170cm', largura: '60cm', profundidade: '65cm' },
+      peso: '60kg',
+      capacidade: '300L',
+      classeEnergetica: 'A'
+    },
+    temperaturas: {
+      refrigerador: { min: 3, max: 9 },
+      freezer: { min: -15, max: -9 }
+    },
+    componentes: {
+      compressor: 'Embraco FF8.5BK',
+      ventilador: 'N/A',
+      termostato: 'Termostato Analógico',
+      condensador: 'Serpentina Interna',
+      evaporador: 'Evaporador Placa Fria'
+    },
+    particularidades: ['Design Retrô']
+  },
+  {
+    id: 'PHC-003',
+    nome: 'Freezer Vertical Frost Free 260L Inox',
+    codigo: 'PFV260I',
+    tipo: 'Freezer',
+    marca: 'Philco',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+PHC-003',
+    especificacoes: {
+      voltagem: '220V',
+      consumo: '390W',
+      dimensoes: { altura: '170cm', largura: '60cm', profundidade: '65cm' },
+      peso: '68kg',
+      capacidade: '260L',
+      classeEnergetica: 'A'
+    },
+    temperaturas: {
+      refrigerador: { min: 0, max: 0 },
+      freezer: { min: -24, max: -18 }
+    },
+    componentes: {
+      compressor: 'Embraco FFI10HAK',
+      ventilador: 'Axial DC',
+      termostato: 'Termostato Eletrônico',
+      condensador: 'Condensador Frio',
+      evaporador: 'Evaporador No Frost'
+    },
+    particularidades: ['Função Congelamento Rápido']
+  },
+  {
+    id: 'PHC-004',
+    nome: 'Refrigerador Side by Side 500L Preto',
+    codigo: 'PRS500P',
+    tipo: 'Refrigerador',
+    marca: 'Philco',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+PHC-004',
+    especificacoes: {
+      voltagem: '127V',
+      consumo: '550W',
+      dimensoes: { altura: '175cm', largura: '90cm', profundidade: '68cm' },
+      peso: '110kg',
+      capacidade: '500L',
+      classeEnergetica: 'A+'
+    },
+    temperaturas: {
+      refrigerador: { min: 0, max: 6 },
+      freezer: { min: -22, max: -16 }
+    },
+    componentes: {
+      compressor: 'Tecumseh THS1380',
+      ventilador: 'Duplo Axial',
+      termostato: 'Painel Touchscreen',
+      condensador: 'Condensador Ventilado',
+      evaporador: 'Evaporador Multi Air Flow'
+    },
+    particularidades: ['Acabamento em Aço Black']
+  },
+  {
+    id: 'PHC-005',
+    nome: 'Freezer Horizontal 145L',
+    codigo: 'PFH150',
+    tipo: 'Freezer',
+    marca: 'Philco',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+PHC-005',
+    especificacoes: {
+      voltagem: '220V',
+      consumo: '280W',
+      dimensoes: { altura: '85cm', largura: '70cm', profundidade: '55cm' },
+      peso: '35kg',
+      capacidade: '145L',
+      classeEnergetica: 'B'
+    },
+    temperaturas: {
+      refrigerador: { min: 0, max: 0 },
+      freezer: { min: -20, max: -10 }
+    },
+    componentes: {
+      compressor: 'Mini Compressor Standard',
+      ventilador: 'N/A',
+      termostato: 'Termostato Ajustável',
+      condensador: 'Condensador Estático',
+      evaporador: 'Evaporador Serpentina'
+    },
+    particularidades: ['Rodízios para Locomoção']
+  },
+  {
+    id: 'PHC-006',
+    nome: 'Refrigerador Top Freezer 340L Branco',
+    codigo: 'PRF340B',
+    tipo: 'Refrigerador',
+    marca: 'Philco',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+PHC-006',
+    especificacoes: {
+      voltagem: '127V',
+      consumo: '390W',
+      dimensoes: { altura: '175cm', largura: '62cm', profundidade: '71cm' },
+      peso: '65kg',
+      capacidade: '340L',
+      classeEnergetica: 'A'
+    },
+    temperaturas: {
+      refrigerador: { min: 3, max: 9 },
+      freezer: { min: -17, max: -11 }
+    },
+    componentes: {
+      compressor: 'Embraco FFI10HAK',
+      ventilador: 'Ventilador Simples',
+      termostato: 'Termostato Eletrônico',
+      condensador: 'Condensador Interno',
+      evaporador: 'Evaporador Frost Free'
+    },
+    particularidades: ['Sistema de Iluminação LED']
+  },
+  {
+    id: 'PHC-007',
+    nome: 'Freezer Horizontal Dupla Ação 400L',
+    codigo: 'PFH400DA',
+    tipo: 'Freezer',
+    marca: 'Philco',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+PHC-007',
+    especificacoes: {
+      voltagem: '220V',
+      consumo: '450W',
+      dimensoes: { altura: '90cm', largura: '130cm', profundidade: '70cm' },
+      peso: '78kg',
+      capacidade: '400L',
+      classeEnergetica: 'B'
+    },
+    temperaturas: {
+      refrigerador: { min: 0, max: 8 },
+      freezer: { min: -20, max: -10 }
+    },
+    componentes: {
+      compressor: 'Tecumseh THS1380',
+      ventilador: 'N/A',
+      termostato: 'Termostato Dupla Ação',
+      condensador: 'Condensador Estático',
+      evaporador: 'Evaporador Serpentina'
+    },
+    particularidades: ['Pode ser usado como Geladeira ou Freezer']
+  },
+  {
+    id: 'PHC-008',
+    nome: 'Refrigerador Inverse Inverter 450L',
+    codigo: 'PRI450I',
+    tipo: 'Refrigerador',
+    marca: 'Philco',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+PHC-008',
+    especificacoes: {
+      voltagem: '127V',
+      consumo: '480W',
+      dimensoes: { altura: '184cm', largura: '70cm', profundidade: '70cm' },
+      peso: '90kg',
+      capacidade: '450L',
+      classeEnergetica: 'A+'
+    },
+    temperaturas: {
+      refrigerador: { min: 2, max: 8 },
+      freezer: { min: -18, max: -12 }
+    },
+    componentes: {
+      compressor: 'Compressor Eco Inverter Philco',
+      ventilador: 'Ventilador Interno',
+      termostato: 'Painel Eletrônico',
+      condensador: 'Condensador Interno',
+      evaporador: 'Evaporador Frost Free'
+    },
+    particularidades: ['Design Inverse (Freezer embaixo)']
+  },
+  {
+    id: 'PHC-009',
+    nome: 'Freezer Vertical Degelo Manual 160L',
+    codigo: 'PFV160M',
+    tipo: 'Freezer',
+    marca: 'Philco',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+PHC-009',
+    especificacoes: {
+      voltagem: '220V',
+      consumo: '300W',
+      dimensoes: { altura: '140cm', largura: '50cm', profundidade: '60cm' },
+      peso: '55kg',
+      capacidade: '160L',
+      classeEnergetica: 'B'
+    },
+    temperaturas: {
+      refrigerador: { min: 0, max: 0 },
+      freezer: { min: -20, max: -10 }
+    },
+    componentes: {
+      compressor: 'Standard Embraco',
+      ventilador: 'N/A',
+      termostato: 'Termostato Mecânico',
+      condensador: 'Serpentina Externa',
+      evaporador: 'Evaporador Placa'
+    },
+    particularidades: ['Degelo Manual']
+  },
+  {
+    id: 'PHC-010',
+    nome: 'Refrigerador Top Freezer 430L Inox',
+    codigo: 'PRF430IX',
+    tipo: 'Refrigerador',
+    marca: 'Philco',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+PHC-010',
+    especificacoes: {
+      voltagem: '127V',
+      consumo: '450W',
+      dimensoes: { altura: '180cm', largura: '68cm', profundidade: '73cm' },
+      peso: '80kg',
+      capacidade: '430L',
+      classeEnergetica: 'A'
+    },
+    temperaturas: {
+      refrigerador: { min: 2, max: 8 },
+      freezer: { min: -18, max: -12 }
+    },
+    componentes: {
+      compressor: 'Compressor Standard',
+      ventilador: 'Ventilador Multi Flow',
+      termostato: 'Painel Eletrônico',
+      condensador: 'Condensador Aletado',
+      evaporador: 'Evaporador Frost Free'
+    },
+    particularidades: ['Acabamento em Inox']
+  },
+  {
+    id: 'MTR-001',
+    nome: 'Cervejeira Expositora Vertical 324L',
+    codigo: 'VN28C',
+    tipo: 'Refrigerador',
+    marca: 'Metalfrio',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+MTR-001',
+    especificacoes: {
+      voltagem: '220V',
+      consumo: '480W',
+      dimensoes: { altura: '190cm', largura: '60cm', profundidade: '65cm' },
+      peso: '90kg',
+      capacidade: '324L',
+      classeEnergetica: 'C'
+    },
+    temperaturas: {
+      refrigerador: { min: -6, max: 2 },
+      freezer: { min: 0, max: 0 }
+    },
+    componentes: {
+      compressor: 'Embraco NEK2134GK',
+      ventilador: 'Ventilador Evaporador Duplo',
+      termostato: 'Controlador Eletrônico Digital',
+      condensador: 'Condensador Aletado',
+      evaporador: 'Evaporador Forçado'
+    },
+    particularidades: ['Ideal para Bebidas (Cerveja)', 'Porta de Vidro Antiembaçante']
+  },
+  {
+    id: 'MTR-002',
+    nome: 'Freezer Horizontal Dupla Ação 419L',
+    codigo: 'HF40',
+    tipo: 'Freezer',
+    marca: 'Metalfrio',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+MTR-002',
+    especificacoes: {
+      voltagem: '127V',
+      consumo: '450W',
+      dimensoes: { altura: '94cm', largura: '130cm', profundidade: '70cm' },
+      peso: '75kg',
+      capacidade: '419L',
+      classeEnergetica: 'C'
+    },
+    temperaturas: {
+      refrigerador: { min: 0, max: 8 },
+      freezer: { min: -20, max: -10 }
+    },
+    componentes: {
+      compressor: 'Tecumseh THS1380',
+      ventilador: 'N/A',
+      termostato: 'Termostato Dupla Ação',
+      condensador: 'Condensador Estático',
+      evaporador: 'Evaporador Serpentina'
+    },
+    particularidades: ['Tampa Sólida']
+  },
+  {
+    id: 'MTR-003',
+    nome: 'Expositor Vertical de Bebidas 570L',
+    codigo: 'VB55',
+    tipo: 'Refrigerador',
+    marca: 'Metalfrio',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+MTR-003',
+    especificacoes: {
+      voltagem: '220V',
+      consumo: '600W',
+      dimensoes: { altura: '205cm', largura: '75cm', profundidade: '75cm' },
+      peso: '120kg',
+      capacidade: '570L',
+      classeEnergetica: 'D'
+    },
+    temperaturas: {
+      refrigerador: { min: 0, max: 7 },
+      freezer: { min: 0, max: 0 }
+    },
+    componentes: {
+      compressor: 'Embraco NEU2170U',
+      ventilador: 'Ventilador de Alta Vazão',
+      termostato: 'Controlador Eletrônico',
+      condensador: 'Condensador Ventilado',
+      evaporador: 'Evaporador Forçado'
+    },
+    particularidades: ['Iluminação LED interna']
+  },
+  {
+    id: 'MTR-004',
+    nome: 'Freezer Vertical Porta de Vidro 520L',
+    codigo: 'VF55',
+    tipo: 'Freezer',
+    marca: 'Metalfrio',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+MTR-004',
+    especificacoes: {
+      voltagem: '127V',
+      consumo: '550W',
+      dimensoes: { altura: '205cm', largura: '75cm', profundidade: '75cm' },
+      peso: '110kg',
+      capacidade: '520L',
+      classeEnergetica: 'D'
+    },
+    temperaturas: {
+      refrigerador: { min: 0, max: 0 },
+      freezer: { min: -24, max: -18 }
+    },
+    componentes: {
+      compressor: 'Compressor de Alta Capacidade',
+      ventilador: 'Ventilador Evaporador',
+      termostato: 'Controlador Digital',
+      condensador: 'Condensador Aletado',
+      evaporador: 'Evaporador Forçado'
+    },
+    particularidades: ['Ideal para Congelados', 'Porta de Vidro Aquecida']
+  },
+  {
+    id: 'MTR-005',
+    nome: 'Freezer Horizontal 2 Portas 535L',
+    codigo: 'HF55',
+    tipo: 'Freezer',
+    marca: 'Metalfrio',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+MTR-005',
+    especificacoes: {
+      voltagem: '220V',
+      consumo: '520W',
+      dimensoes: { altura: '94cm', largura: '150cm', profundidade: '80cm' },
+      peso: '95kg',
+      capacidade: '535L',
+      classeEnergetica: 'C'
+    },
+    temperaturas: {
+      refrigerador: { min: 0, max: 0 },
+      freezer: { min: -25, max: -15 }
+    },
+    componentes: {
+      compressor: 'Embraco NEK2134GK',
+      ventilador: 'N/A',
+      termostato: 'Termostato Comercial',
+      condensador: 'Condensador Estático',
+      evaporador: 'Evaporador Serpentina'
+    },
+    particularidades: ['Dupla Tampa Sólida']
+  },
+  {
+    id: 'MTR-006',
+    nome: 'Expositor Vertical de Laticínios 400L',
+    codigo: 'VB40L',
+    tipo: 'Refrigerador',
+    marca: 'Metalfrio',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+MTR-006',
+    especificacoes: {
+      voltagem: '127V',
+      consumo: '500W',
+      dimensoes: { altura: '190cm', largura: '65cm', profundidade: '65cm' },
+      peso: '100kg',
+      capacidade: '400L',
+      classeEnergetica: 'C'
+    },
+    temperaturas: {
+      refrigerador: { min: 2, max: 8 },
+      freezer: { min: 0, max: 0 }
+    },
+    componentes: {
+      compressor: 'Tecumseh THS1380',
+      ventilador: 'Ventilador Evaporador',
+      termostato: 'Controlador Eletrônico',
+      condensador: 'Condensador Aletado',
+      evaporador: 'Evaporador Forçado'
+    },
+    particularidades: ['Prateleiras Reguláveis']
+  },
+  {
+    id: 'MTR-007',
+    nome: 'Cervejeira Slim 220L',
+    codigo: 'VN22C',
+    tipo: 'Refrigerador',
+    marca: 'Metalfrio',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+MTR-007',
+    especificacoes: {
+      voltagem: '220V',
+      consumo: '380W',
+      dimensoes: { altura: '170cm', largura: '50cm', profundidade: '60cm' },
+      peso: '70kg',
+      capacidade: '220L',
+      classeEnergetica: 'C'
+    },
+    temperaturas: {
+      refrigerador: { min: -6, max: 2 },
+      freezer: { min: 0, max: 0 }
+    },
+    componentes: {
+      compressor: 'Embraco FFI10HAK',
+      ventilador: 'Ventilador Evaporador',
+      termostato: 'Controlador Eletrônico',
+      condensador: 'Condensador Aletado',
+      evaporador: 'Evaporador Forçado'
+    },
+    particularidades: ['Design Compacto para Cerveja']
+  },
+  {
+    id: 'MTR-008',
+    nome: 'Freezer Horizontal Tampa de Vidro 300L',
+    codigo: 'HV30',
+    tipo: 'Freezer',
+    marca: 'Metalfrio',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+MTR-008',
+    especificacoes: {
+      voltagem: '127V',
+      consumo: '400W',
+      dimensoes: { altura: '94cm', largura: '110cm', profundidade: '70cm' },
+      peso: '65kg',
+      capacidade: '300L',
+      classeEnergetica: 'D'
+    },
+    temperaturas: {
+      refrigerador: { min: 0, max: 0 },
+      freezer: { min: -25, max: -15 }
+    },
+    componentes: {
+      compressor: 'Tecumseh THB1340Y',
+      ventilador: 'N/A',
+      termostato: 'Termostato Comercial',
+      condensador: 'Condensador Estático',
+      evaporador: 'Evaporador Serpentina'
+    },
+    particularidades: ['Tampa de Vidro Deslizante Curvo']
+  },
+  {
+    id: 'MTR-009',
+    nome: 'Refrigerador Expositor para Flores 700L',
+    codigo: 'VF70F',
+    tipo: 'Refrigerador',
+    marca: 'Metalfrio',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+MTR-009',
+    especificacoes: {
+      voltagem: '220V',
+      consumo: '700W',
+      dimensoes: { altura: '210cm', largura: '90cm', profundidade: '80cm' },
+      peso: '140kg',
+      capacidade: '700L',
+      classeEnergetica: 'E'
+    },
+    temperaturas: {
+      refrigerador: { min: 5, max: 10 },
+      freezer: { min: 0, max: 0 }
+    },
+    componentes: {
+      compressor: 'Compressor Especializado',
+      ventilador: 'Ventilador de Umidade Controlada',
+      termostato: 'Controlador de Temperatura e Umidade',
+      condensador: 'Condensador Ventilado',
+      evaporador: 'Evaporador Forçado'
+    },
+    particularidades: ['Sistema de Umidificação Controlada']
+  },
+  {
+    id: 'MTR-010',
+    nome: 'Freezer Vertical Slim 350L Porta Cega',
+    codigo: 'VF35PC',
+    tipo: 'Freezer',
+    marca: 'Metalfrio',
+    imagem: 'https://via.placeholder.com/600x400?text=Modelo+MTR-010',
+    especificacoes: {
+      voltagem: '127V',
+      consumo: '450W',
+      dimensoes: { altura: '190cm', largura: '60cm', profundidade: '65cm' },
+      peso: '85kg',
+      capacidade: '350L',
+      classeEnergetica: 'C'
+    },
+    temperaturas: {
+      refrigerador: { min: 0, max: 0 },
+      freezer: { min: -24, max: -18 }
+    },
+    componentes: {
+      compressor: 'Embraco NEK2134GK',
+      ventilador: 'Ventilador Evaporador',
+      termostato: 'Controlador Eletrônico',
+      condensador: 'Condensador Aletado',
+      evaporador: 'Evaporador Forçado'
+    },
+    particularidades: ['Uso Comercial (Armazenamento)']
+  }
 ]
