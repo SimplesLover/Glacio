@@ -16,28 +16,28 @@ try {
 } catch (e) {}
 
 export const lightColors = {
-  primaryDark: '#5086c1',
-  primary: '#6a9eda',
-  primaryLight: '#84b6f4',
-  secondary: '#b2dafa',
-  tertiary: '#dcffff',
-  background: '#ffffff',
-  card: '#ffffff',
-  text: '#333333',
-  textSecondary: '#666666',
-  border: '#e6e6e6',
+  primaryDark: '#4e80c9',
+  primary: '#6aa0df',
+  primaryLight: '#92b9ee',
+  secondary: '#cbe2ff',
+  tertiary: '#e6f0ff',
+  background: '#eaf3ff',
+  card: '#e6f0ff',
+  text: '#1f2937',
+  textSecondary: '#475569',
+  border: '#c5d8f6',
   highlight: '#84b6f4'
 }
 
 export const darkColors = {
-  background: '#1a1a1a',
-  backgroundSecondary: '#2d2d2d',
-  card: '#3a3a3a',
-  primary: '#6a9eda',
-  highlight: '#84b6f4',
-  text: '#f5f5f5',
-  textSecondary: '#b0b0b0',
-  border: '#4a4a4a'
+  background: '#0b1220',
+  backgroundSecondary: '#0f172a',
+  card: '#0f172a',
+  primary: '#6aa0df',
+  highlight: '#92b9ee',
+  text: '#e5eaf5',
+  textSecondary: '#9fb3d0',
+  border: '#1e2a44'
 }
 
 export const getColors = theme => (theme === 'dark' ? darkColors : lightColors)
