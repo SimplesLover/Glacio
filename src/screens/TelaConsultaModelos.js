@@ -6,6 +6,7 @@ import { MODELOS } from '../data/modelos'
 import { useRoute, useNavigation } from '@react-navigation/native'
 import { wp, hp, fs } from '../constants/theme'
 import { Ionicons } from '@expo/vector-icons'
+import { useThemeContext } from '../contexts/ThemeContext'
 
 export default function TelaConsultaModelos() {
   const route = useRoute()
@@ -16,6 +17,7 @@ export default function TelaConsultaModelos() {
   const { width } = useWindowDimensions()
   const gap = wp(2)
   const itemWidth = (width - gap * (2 + 1)) / 2
+  const { colors, isDark } = useThemeContext()
   const marca = route.params?.marca
   const allOptions = useMemo(() => {
     const marcas = Array.from(new Set(MODELOS.map(m => m.marca)))
@@ -60,11 +62,11 @@ export default function TelaConsultaModelos() {
         bgColor={'#6a9eda'}
       >
         <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-          <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', gap: 8, paddingHorizontal: 12, borderRadius: 24, height: hp(5.2), backgroundColor: '#0f172a' }}>
-            <Ionicons name="search" size={fs(16)} color={'#cbd5e1'} />
-            <TextInput style={{ flex: 1, fontSize: fs(14), color: '#e2e8f0' }} placeholder="Buscar por nome/código/marca" placeholderTextColor={'#94a3b8'} value={q} onChangeText={setQ} />
+          <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', gap: 8, paddingHorizontal: 12, borderRadius: 24, height: hp(5.2), backgroundColor: isDark ? colors.backgroundSecondary : '#0f172a' }}>
+            <Ionicons name="search" size={fs(16)} color={colors.textSecondary} />
+            <TextInput style={{ flex: 1, fontSize: fs(14), color: colors.text }} placeholder="Buscar por nome/código/marca" placeholderTextColor={colors.textSecondary} value={q} onChangeText={setQ} />
             <TouchableOpacity onPress={() => setShowFilters(v => !v)} style={{ padding: 10 }}>
-              <Ionicons name="filter" size={fs(18)} color={'#cbd5e1'} />
+              <Ionicons name="filter" size={fs(18)} color={colors.textSecondary} />
             </TouchableOpacity>
           </View>
         </View>
@@ -73,10 +75,10 @@ export default function TelaConsultaModelos() {
       {showFilters && (
         <>
           <Pressable style={[StyleSheet.absoluteFillObject, { zIndex: 9 }]} onPress={() => setShowFilters(false)} />
-          <View style={{ marginHorizontal: gap, marginTop: gap, borderWidth: 1, borderRadius: 12, padding: gap, backgroundColor: '#fff', borderColor: '#e6e6e6', zIndex: 10, elevation: 4 }}>
+          <View style={{ marginHorizontal: gap, marginTop: gap, borderWidth: 1, borderRadius: 12, padding: gap, backgroundColor: colors.card, borderColor: colors.border, zIndex: 10, elevation: 4 }}>
             {Object.entries(allOptions).map(([key, opts]) => (
               <View key={key} style={{ marginBottom: 8 }}>
-                <Text style={{ fontSize: fs(13), marginBottom: 6 }}>{key.charAt(0).toUpperCase() + key.slice(1)}</Text>
+                <Text style={{ fontSize: fs(13), marginBottom: 6, color: colors.text }}>{key.charAt(0).toUpperCase() + key.slice(1)}</Text>
                 <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }}>
                   {opts.map(v => {
                     const selected = filters[key]?.includes(v)
@@ -85,8 +87,8 @@ export default function TelaConsultaModelos() {
                         const arr = filters[key] || []
                         const next = selected ? arr.filter(x => x !== v) : [...arr, v]
                         setFilters({ ...filters, [key]: next })
-                      }} style={{ paddingHorizontal: 10, paddingVertical: 6, borderRadius: 16, borderWidth: 1, borderColor: selected ? '#6a9eda' : '#ccc', backgroundColor: selected ? '#e6f0ff' : '#fff' }}>
-                        <Text style={{ fontSize: fs(12) }}>{v}</Text>
+                      }} style={{ paddingHorizontal: 10, paddingVertical: 6, borderRadius: 16, borderWidth: 1, borderColor: selected ? colors.primary : colors.border, backgroundColor: selected ? (isDark ? colors.backgroundSecondary : '#e6f0ff') : colors.card }}>
+                        <Text style={{ fontSize: fs(12), color: colors.text }}>{v}</Text>
                       </TouchableOpacity>
                     )
                   })}
