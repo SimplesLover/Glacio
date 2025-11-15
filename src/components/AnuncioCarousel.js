@@ -3,7 +3,7 @@ import { View, Text, FlatList, TouchableOpacity, Image, StyleSheet, useWindowDim
 import { MODELOS } from '../data/modelos'
 import { useNavigation } from '@react-navigation/native'
 import { useThemeContext } from '../contexts/ThemeContext'
-import { wp, fs } from '../constants/theme'
+import { wp, hp, fs } from '../constants/theme'
 
 function pickHighlights() {
   const shuffled = [...MODELOS].sort(() => Math.random() - 0.5)
@@ -26,13 +26,10 @@ export default function AnuncioCarousel() {
         data={items}
         keyExtractor={item => item.id}
         showsHorizontalScrollIndicator={false}
-        renderItem={({ item }) => (
-          <TouchableOpacity onPress={() => nav.navigate('TelaDetalheModelo', { modeloId: item.id })} style={[styles.card, { width: itemSize, height: itemSize, marginLeft: gap, backgroundColor: colors.card, borderColor: colors.border }] }>
-            <Image source={{ uri: item.imagem }} style={{ width: '100%', height: '100%' }} />
-            <View style={styles.overlay}>
-              <Text style={styles.overlayText}>{item.nome}</Text>
-              <Text style={styles.overlaySub}>{item.codigo}</Text>
-            </View>
+        renderItem={({ item, index }) => (
+          <TouchableOpacity onPress={() => nav.navigate('TelaDetalheModelo', { modeloId: item.id })} style={[styles.card, { width: itemSize, height: itemSize, marginLeft: index === 0 ? 0 : gap, backgroundColor: colors.card, borderColor: colors.border }] }>
+            <Image source={{ uri: item.imagem }} style={styles.image} />
+            <Text style={[styles.name, { color: colors.text }]} numberOfLines={1}>{item.nome}</Text>
           </TouchableOpacity>
         )}
       />
@@ -43,8 +40,7 @@ export default function AnuncioCarousel() {
 const styles = StyleSheet.create({
   container: { marginTop: hp(2), marginBottom: hp(2) },
   title: { marginHorizontal: wp(2), marginBottom: hp(1), fontSize: fs(16), fontWeight: '600' },
-  card: { borderRadius: 12, overflow: 'hidden', position: 'relative', borderWidth: 1 },
-  overlay: { position: 'absolute', bottom: 0, left: 0, right: 0, padding: wp(3), backgroundColor: 'rgba(0,0,0,0.35)' },
-  overlayText: { color: '#fff', fontSize: fs(14), fontWeight: '700' },
-  overlaySub: { color: '#fff', fontSize: fs(12), marginTop: 2 }
+  card: { marginLeft: wp(2), borderRadius: 12, overflow: 'hidden', borderWidth: 1 },
+  image: { width: '100%', height: '70%' },
+  name: { padding: wp(3), fontSize: fs(14) }
 })
